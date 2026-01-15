@@ -45,22 +45,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to generate property BLOCK cards
     const generateBlocks = () => {
         if (!blocksGrid || typeof propertyBlocks === 'undefined') return;
-        
+
+        const template = document.getElementById('property-block-template');
+        if (!template) {
+            console.error('Property block template not found!');
+            return;
+        }
+
         blocksGrid.innerHTML = ''; // Clear existing content
         propertyBlocks.forEach(block => {
-            const card = document.createElement('div');
-            card.className = 'card block-card';
-            card.dataset.name = block.name; // Add data-name for identification
+            const card = template.content.cloneNode(true).querySelector('.card');
+            
+            card.querySelector('.card-img').src = block.image;
+            card.querySelector('.card-img').alt = block.name;
+            card.querySelector('.card-title').textContent = block.name;
+            card.querySelector('.card-location').textContent = block.location;
+            
+            const availableUnitsParagraph = document.createElement('p');
+            availableUnitsParagraph.className = 'available-units';
+            availableUnitsParagraph.textContent = `Units: ${block.availableUnits}`;
+            
+            card.querySelector('.card-content').insertBefore(availableUnitsParagraph, card.querySelector('.card-status'));
+            
+            const statusDiv = card.querySelector('.card-status');
+            statusDiv.textContent = block.status;
+            
+            const banner = card.querySelector('.card-banner');
+            let statusClass = block.status.toLowerCase().replace(' ', '-'); // e.g., 'sold-out'
+            banner.classList.add(statusClass);
 
-            card.innerHTML = `
-                <div class="card-image" style="background-image: url('${block.image}');"></div>
-                <div class="card-content">
-                    <h3>${block.name}</h3>
-                    <p class="location">${block.location}</p>
-                    <p class="available-units">Units: ${block.availableUnits}</p>
-                    <p class="view-units-prompt">Click to view units</p>
-                </div>
-            `;
+            // Add dataset for modal
+            card.dataset.name = block.name;
+
             blocksGrid.appendChild(card);
         });
     };
@@ -78,10 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const unitCard = document.createElement('div');
                 unitCard.className = 'card unit-card';
                 unitCard.innerHTML = `
-                    <h4>${unit.type}</h4>
+                    <h4><i class="fas fa-door-open"></i> ${unit.type}</h4>
+                    <p><i class="fas fa-box"></i> <strong>Storage:</strong> ${unit.storage} kg</p>
+                    <p><i class="fas fa-users"></i> <strong>Max Occupancy:</strong> ${unit.max_capacity}</p>
                     <p><strong>Rent:</strong> ${unit.rent}</p>
-                    <p><strong>Storage:</strong> ${unit.storage} kg</p>
-                    <p><strong>Max Occupancy:</strong> ${unit.max_capacity}</p>
+
                 `;
                 modalContent.appendChild(unitCard);
             });
@@ -101,11 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'card team-card';
             card.innerHTML = `
-                <div class="card-image" style="background-image: url('${member.image}');"></div>
+                <img src="${member.image}" alt="${member.name}" class="card-img">
                 <div class="card-content">
                     <h3>${member.name}</h3>
                     <p class="role">${member.role}</p>
-                    <p class="phone">Phone: ${member.phone}</p>
+                    <p class="phone"><i class="fas fa-phone-alt"></i> ${member.phone}</p>
                 </div>
             `;
             teamGrid.appendChild(card);
@@ -114,11 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- EVENT LISTENERS ---
 
-    // Click listener for block cards (using event delegation)
+    // Click listener for "View Units" button (using event delegation)
     blocksGrid.addEventListener('click', (e) => {
-        const card = e.target.closest('.block-card');
-        if (card) {
-            populateAndShowUnits(card.dataset.name);
+        if (e.target.classList.contains('view-units-btn')) {
+            const card = e.target.closest('.card');
+            if (card) {
+                populateAndShowUnits(card.dataset.name);
+            }
         }
     });
 

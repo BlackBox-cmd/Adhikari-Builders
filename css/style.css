@@ -227,15 +227,28 @@ body.light-mode .discord-button {
     box-shadow: 0 10px 25px var(--shadow-color);
 }
 
-.card-image {
+.card-img {
     height: 200px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    width: 100%;
+    object-fit: cover;
 }
+
+.card-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.card-banner.available { background-color: var(--available-color); }
+.card-banner.limited { background-color: var(--limited-color); }
+.card-banner.sold-out { background-color: var(--full-color); }
+
 
 .card-content {
     padding: 20px;
+    position: relative;
 }
 
 .card-content h3 {
@@ -248,22 +261,24 @@ body.light-mode .discord-button {
     color: var(--text-secondary);
 }
 
-/* Block Card Specifics */
-.block-card {
-    cursor: pointer;
-}
-.view-units-prompt {
-    font-style: italic;
+.card-status {
+    position: absolute;
+    top: -30px; /* Adjust to sit on the banner */
+    right: 15px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
     font-size: 0.9rem;
-    text-align: center;
-    margin-top: 15px !important;
-    color: var(--accent-color) !important;
-}
-.available-units {
     font-weight: 700;
-    color: var(--text-primary);
-    margin-top: 10px !important;
-    font-size: 1.1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/* Block Card Specifics */
+.block-card .cta-button {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Team Card Specifics */
@@ -428,6 +443,11 @@ input:checked + .slider:before {
 }
 .unit-card h4 {
     margin: 0 0 10px 0;
+    color: var(--accent-color);
+}
+
+.unit-card i {
+    margin-right: 10px;
     color: var(--accent-color);
 }
 
