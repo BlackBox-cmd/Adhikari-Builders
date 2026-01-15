@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhikari Builders - Los Santos Rental Division</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="company-logo">Adhikari Builders</a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#blocks" class="nav-link">Available Blocks</a>
+                <a href="#rules" class="nav-link">Rules</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-controls">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <a href="https://discord.gg/tXmZJf94ty" target="_blank" class="discord-button">Join Discord</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Los Santos Rental Division</h1>
+                <p>Secure • Legal • RP-Friendly Housing</p>
+                <a href="#blocks" class="cta-button">View Available Blocks</a>
+            </div>
+        </section>
+
+        <section id="blocks" class="content-section">
+            <div class="container">
+                <h2>Available Blocks</h2>
+                <div id="blocks-grid" class="grid">
+                    <!-- Property blocks will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="rules" class="content-section alt-bg">
+            <div class="container">
+                <h2>Rules & Information</h2>
+                <div class="rules-panel">
+                    <ul>
+                        <li>Rent must be paid before the due date.</li>
+                        <li>No illegal activities inside properties.</li>
+                        <li>No sub-letting without approval.</li>
+                        <li>Property damage may result in fines or eviction.</li>
+                        <li>3 missed payments may lead to eviction.</li>
+                        <li>RP behavior is mandatory.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="content-section">
+            <div class="container">
+                <h2>Professional real estate experts at your service</h2>
+                <div id="team-grid" class="grid">
+                    <!-- Team members will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section alt-bg">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <p>For all inquiries, please reach out to us through our official channels.</p>
+                    <p><strong>In-Game Office:</strong> Visit our main office in Rockford Hills during business hours.</p>
+                    <p><strong>Discord:</strong> For support and announcements, please join our Discord server.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© Adhikari Builders — GTA V 2026</p>
+            <p> Designed and Developed by <a href="https://freakcloud.tk" target="_blank"> Mr_Freak_cmd</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="unit-modal" class="modal-overlay">
+        <div class="modal-panel">
+            <button class="modal-close">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div id="modal-content" class="grid">
+                <!-- Unit details will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
