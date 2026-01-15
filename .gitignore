@@ -14,6 +14,4 @@ package-lock.json
 .vscode/
 .idea/
 
-# Cloudflare Pages build output (if not deployed from 'dist')
-dist/
-wrangler.jsonc
+
