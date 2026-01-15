@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const availableUnitsParagraph = document.createElement('p');
             availableUnitsParagraph.className = 'available-units';
-            availableUnitsParagraph.textContent = `Units: ${block.availableUnits}`;
+            availableUnitsParagraph.innerHTML = `<i class="fas fa-th-large"></i> Units: ${block.availableUnits}`;
             
             card.querySelector('.card-content').insertBefore(availableUnitsParagraph, card.querySelector('.card-status'));
             
