@@ -16,3 +16,4 @@ package-lock.json
 
 # Cloudflare Pages build output (if not deployed from 'dist')
 dist/
+wrangler.jsonc
