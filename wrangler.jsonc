@@ -1,0 +1,8 @@
+{
+  "name": "adhikari-builders",
+  "compatibility_date": "2026-01-15",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  }
+}
