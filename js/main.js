@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             card.querySelector('.card-img').src = block.image;
             card.querySelector('.card-img').alt = block.name;
-            card.querySelector('.card-title').textContent = block.name;
+            card.querySelector('.card-title').innerHTML = `<i class="fas fa-building"></i> ${block.name}`;
             card.querySelector('.card-location').textContent = block.location;
             
             const availableUnitsParagraph = document.createElement('p');
