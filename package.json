@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Adhikari Builders - Los Santos Rental Division Static Site",
   "scripts": {
-    "build": "echo 'No build step required for static site, copying assets directly.'; mkdir -p dist; cp -R ./* dist/; cp -R ./css ./dist; cp -R ./js ./dist; cp -R ./assets ./dist",
-    "deploy": "npx wrangler pages deploy dist --project-name=adhikari-builders --branch=main"
+    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/ && cp -R css/ dist/ && cp -R js/ dist/ && cp -R assets/ dist/"
   },
   "devDependencies": {
     "wrangler": "^3.0.0"
