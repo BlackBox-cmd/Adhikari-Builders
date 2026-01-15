@@ -2,15 +2,6 @@
   "name": "adhikari-builders",
   "compatibility_date": "2026-01-15",
   "assets": {
-    "directory": ".",
-    "exclude": [
-      "node_modules/**",
-      "package.json",
-      "package-lock.json",
-      "wrangler.jsonc",
-      ".git/**",
-      ".gitignore",
-      "README.md"
-    ]
+    "directory": "dist"
   }
 }
