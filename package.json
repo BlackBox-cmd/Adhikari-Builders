@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Adhikari Builders - Los Santos Rental Division Static Site",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/ && cp -R css/ dist/ && cp -R js/ dist/ && cp -R assets/ dist/"
+    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/ && cp -R css/ dist/ && cp -R js/ dist/ && cp -R assets/ dist/",
+    "deploy": "npm run build && npx wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^3.0.0"
