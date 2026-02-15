@@ -1,6 +1,6 @@
 # Adhikari Builders - Los Santos Rental Division (GTA V RP Website)
 
-![Adhikari Builders Logo Placeholder]([https://via.placeholder.com/150x50?text=Adhikari+Builders](https://i.postimg.cc/fyP0xGFk/Adhikari-Builders.png))
+![Adhikari Builders Logo Placeholder](https://i.postimg.cc/fyP0xGFk/Adhikari-Builders.png )
 
 Welcome to the official website for Adhikari Builders, Los Santos Rental Division. This is an in-character Grand Theft Auto V Roleplay (GTA V RP) business focused on providing secure, legal, and RP-friendly housing within the city of Los Santos.
 
