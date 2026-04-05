@@ -1,91 +1,85 @@
 const propertyBlocks = [
     {
-        name: "Block A",
-        location: "Downtown Vinewood",
-        availableUnits: "7/12",
-        status: "Available",
-        phone: "555-0101",
-        image: "https://i.postimg.cc/v8SY57rf/Screenshot_38.png",
-        units: [
-            { type: "1-Bedroom Apt", storage: 1500, max_capacity: 2, rent: "$25,000" },
-            { type: "2-Bedroom Apt", storage: 2000, max_capacity: 4, rent: "$35,000" },
-            { type: "3-Bedroom Apt", storage: 2500, max_capacity: 6, rent: "$45,000" }
-        ]
+        id: 2,
+        name: "Forum Dr. Apt. Complex B",
+        occupiedProperties: "20/20",
+        income: 56500,
+        cost: 30000,
+        image: "https://i.postimg.cc/HnRRpwSM/Forum_Dr_Apt_Complex_B.png"
     },
     {
-        name: "Block B",
-        location: "Del Perro",
-        availableUnits: "1/10",
-        status: "Limited",
-        phone: "555-0102",
-        image: "https://i.postimg.cc/v8SY57rf/Screenshot_38.png",
-        units: [
-            { type: "Studio", storage: 1000, max_capacity: 1, rent: "$30,000" },
-            { type: "1-Bedroom Apt", storage: 1800, max_capacity: 2, rent: "$40,000" },
-            { type: "2-Bedroom Beachfront", storage: 2200, max_capacity: 4, rent: "$50,000" }
-        ]
+        id: 163,
+        name: "Niland Avenue",
+        occupiedProperties: "6/8",
+        income: 12000,
+        cost: 8000,
+        image: "https://i.postimg.cc/kGzznQjQ/Niland_Avenue.png"
     },
     {
-        name: "Block C",
-        location: "Strawberry",
-        availableUnits: "0/15",
-        status: "Sold Out",
-        phone: "555-0103",
-        image: "https://i.postimg.cc/v8SY57rf/Screenshot_38.png",
-        units: [
-            { type: "Small Studio", storage: 800, max_capacity: 1, rent: "$15,000" },
-            { type: "Standard Apt", storage: 1200, max_capacity: 2, rent: "$25,000" }
-        ]
+        id: 66,
+        name: "Steele Way",
+        occupiedProperties: "4/6",
+        income: 34300,
+        cost: 48000,
+        image: "https://i.postimg.cc/C5XXFGvC/Steele_Way.png"
     },
     {
-        name: "Block D",
-        location: "Rockford Hills",
-        availableUnits: "2/8",
-        status: "Available",
-        phone: "555-0104",
-        image: "https://i.postimg.cc/v8SY57rf/Screenshot_38.png",
-        units: [
-            { type: "Luxury Apartment", storage: 4000, max_capacity: 4, rent: "$60,000" },
-            { type: "Penthouse Suite", storage: 8000, max_capacity: 8, rent: "$120,000" }
-        ]
+        id: 37,
+        name: "Nikola Avenue",
+        occupiedProperties: "5/6",
+        income: 42000,
+        cost: 31500,
+        image: "https://i.postimg.cc/BbkkqTh2/Nikola_Avenue.png"
+    },
+    {
+        id: 77,
+        name: "Eclipse Boulevard",
+        occupiedProperties: "10/10",
+        income: 40000,
+        cost: 14000,
+        image: "https://i.postimg.cc/VvppYq7M/Eclipse_Boulevard.png"
+    },
+    {
+        id: 3,
+        name: "Forum Dr. Apt. Complex C",
+        occupiedProperties: "11/19",
+        income: 30500,
+        cost: 28500,
+        image: "https://i.postimg.cc/tJwwX3rx/Forum_Dr_Apt_Complex_C.png"
+    },
+    {
+        id: 16,
+        name: "Brouge Avenue",
+        occupiedProperties: "0/10",
+        income: 0,
+        cost: 45000,
+        image: "https://i.postimg.cc/d3ppq2Wr/Brouge_Avenue.png"
     }
 ];
 
 const teamMembers = [
     {
-        name: "John 'Jax' Adhikari",
+        name: "Akkhar Adhikari",
         role: "CEO / Founder",
         phone: "555-0101",
         image: "https://i.postimg.cc/V6WgkjxT/image.png" 
     },
     {
-        name: "Maria Garcia",
-        role: "Deputy Director",
-        phone: "555-0102",
+        name: "Freak Carlos",
+        role: "COO / CTO",
+        phone: "262-3261",
         image: "https://i.postimg.cc/V6WgkjxT/image.png"
     },
     {
-        name: "David Chen",
-        role: "Property Manager",
+        name: "Taz Shayal",
+        role: "Manager",
         phone: "555-0103",
         image: "https://i.postimg.cc/V6WgkjxT/image.png"
     },
     {
-        name: "Emily White",
-        role: "Leasing Agent",
-        phone: "555-0104",
-        image: "https://i.postimg.cc/V6WgkjxT/image.png"
-    },
-    {
-        name: "Michael Brown",
-        role: "Client Relations Officer",
-        phone: "555-0105",
-        image: "https://i.postimg.cc/V6WgkjxT/image.png"
-    },
-    {
-        name: "Sarah Jones",
-        role: "Security & Compliance",
-        phone: "555-0106",
+        name: "Xenom Cortez",
+        role: "Realtor",
+        phone: "120-7012",
         image: "https://i.postimg.cc/V6WgkjxT/image.png"
     }
 ];

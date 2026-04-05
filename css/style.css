@@ -4,14 +4,14 @@
     --border-color: #2E2E2E;
     --text-primary: #FFFFFF;
     --text-secondary: #B3B3B3;
-    --accent-color: #FFD700; /* Gold */
+    --accent-color: #1dac00; /* Gold */
     --accent-hover: #B89B00; /* Darker Gold */
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
     --shadow-color: rgba(0, 0, 0, 0.5);
-    --available-color: #4CAF50;
-    --limited-color: #FFC107;
-    --full-color: #F44336;
+    --available-color: #00ff08;
+    --limited-color: #fbff07;
+    --full-color: #ff1100;
 }
 
 /* --- Light Mode Variables --- */
@@ -214,6 +214,7 @@ body.light-mode .discord-button {
 }
 
 .card {
+    position: relative;
     background-color: var(--panel-color);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -261,24 +262,109 @@ body.light-mode .discord-button {
     color: var(--text-secondary);
 }
 
-.card-status {
-    position: absolute;
-    top: -30px; /* Adjust to sit on the banner */
-    right: 15px;
-    background-color: rgba(0,0,0,0.7);
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.9rem;
+/* --- Status Badge --- */
+.card-status-badge {
+    padding: 3px 10px;
+    font-size: 0.75rem;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 4px;
     text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+}
+.card-status-badge.available { background-color: var(--available-color); }
+.card-status-badge.limited { background-color: var(--limited-color); color: #000; }
+.card-status-badge.sold-out { background-color: var(--full-color); }
+
+/* --- Block Card Layout --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-/* Block Card Specifics */
-.block-card .cta-button {
-    margin-top: 15px;
+.block-id {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.occupancy-section {
+    margin: 12px 0 0 0;
+}
+
+.card-occupancy {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.available-tag {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.occupancy-bar {
     width: 100%;
+    height: 5px;
+    background-color: var(--border-color);
+    border-radius: 3px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.occupancy-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.8s ease;
+}
+
+.occupancy-fill.high { background-color: var(--full-color); }
+.occupancy-fill.medium { background-color: var(--limited-color); }
+.occupancy-fill.low { background-color: var(--available-color); }
+
+/* --- Financial Info --- */
+.card-financials {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.financial-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+    font-size: 0.9rem;
+}
+
+.financial-label {
+    color: var(--text-secondary);
+}
+
+.financial-label i {
+    margin-right: 8px;
+    width: 14px;
     text-align: center;
+    color: var(--accent-color);
+}
+
+.financial-value {
+    font-weight: 700;
+    font-family: var(--font-secondary);
+}
+
+.financial-value.income { color: var(--available-color); }
+.financial-value.cost { color: var(--text-secondary); }
+.financial-value.positive { color: var(--available-color); }
+.financial-value.negative { color: var(--full-color); }
+
+.financial-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 5px 0;
 }
 
 /* Team Card Specifics */

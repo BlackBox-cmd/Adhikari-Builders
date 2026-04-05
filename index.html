@@ -16,26 +16,13 @@
 </head>
 <body>
 
-    <!-- Template for a single property block -->
-    <template id="property-block-template">
-        <div class="card">
-            <img src="" alt="Property Image" class="card-img">
-            <div class="card-banner"></div>
-            <div class="card-content">
-                <h3 class="card-title"></h3>
-                <p class="card-location"></p>
-                <p class="available-units"></p>
-                <div class="card-status"></div>
-                <button class="cta-button view-units-btn">View Units</button>
-            </div>
-        </div>
-    </template>
+
     <header class="navbar">
         <div class="container">
             <a href="#" class="company-logo">Adhikari Builders</a>
             <nav class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#blocks" class="nav-link">Available Blocks</a>
+                <a href="#blocks" class="nav-link">Properties</a>
                 <a href="#rules" class="nav-link">Rules</a>
                 <a href="#team" class="nav-link">Team</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -47,7 +34,7 @@
                         <div class="slider round"></div>
                     </label>
                 </div>
-                <a href="https://discord.gg/tXmZJf94ty" target="_blank" class="discord-button">Join Discord</a>
+                <a href="https://discord.gg/ar8zyW2GDN" target="_blank" rel="noopener" class="discord-button">Join Discord</a>
             </div>
             <button class="hamburger">
                 <span></span>
@@ -61,15 +48,15 @@
         <section id="home" class="hero-section">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
-                <h1>Los Santos Rental Division</h1>
-                <p>Secure • Legal • RP-Friendly Housing</p>
-                <a href="#blocks" class="cta-button">View Available Blocks</a>
+                <h1>Adhikari Builders</h1>
+                <p>Secure • Legal • Budget Friendly Housing</p>
+                <a href="#blocks" class="cta-button">View Properties</a>
             </div>
         </section>
 
         <section id="blocks" class="content-section">
             <div class="container">
-                <h2>Available Blocks</h2>
+                <h2>Property Portfolio</h2>
                 <div id="blocks-grid" class="grid">
                     <!-- Property blocks will be dynamically injected here -->
                 </div>
@@ -120,16 +107,7 @@
         </div>
     </footer>
 
-    <!-- Modal Structure -->
-    <div id="unit-modal" class="modal-overlay">
-        <div class="modal-panel">
-            <button class="modal-close">&times;</button>
-            <h2 id="modal-title"></h2>
-            <div id="modal-content" class="grid">
-                <!-- Unit details will be injected here -->
-            </div>
-        </div>
-    </div>
+
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
