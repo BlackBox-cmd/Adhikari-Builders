@@ -81,5 +81,11 @@ const teamMembers = [
         role: "Realtor",
         phone: "120-7012",
         image: "https://i.postimg.cc/V6WgkjxT/image.png"
+    },
+    {
+        name: "Munshi Jr",
+        role: "Realtor",
+        phone: "559-3942",
+        image: "https://i.postimg.cc/BQ17WLrC/Munshi-Jr.png"
     }
 ];
