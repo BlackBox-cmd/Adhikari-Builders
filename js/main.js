@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const card = document.createElement('div');
             card.className = 'card block-card';
+            card.style.cursor = 'pointer';
             card.innerHTML = `
                 <img src="${block.image}" alt="${block.name}" class="card-img">
                 <div class="card-banner ${statusClass}"></div>
@@ -66,10 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="occupancy-bar">
                             <div class="occupancy-fill ${barClass}" style="width: ${occupancyPct}%"></div>
                         </div>
+                        <p class="card-storage" style="margin-top: 10px; font-size: 0.9em; color: var(--text-secondary);"><i class="fas fa-box"></i> Total Storage: ${block.storage ? block.storage.toLocaleString() : 0} su</p>
                     </div>
 
                 </div>
             `;
+            card.addEventListener('click', () => openPropertyModal(block));
             blocksGrid.appendChild(card);
         });
     };
@@ -92,6 +95,53 @@ document.addEventListener('DOMContentLoaded', () => {
             teamGrid.appendChild(card);
         });
     };
+
+    // --- MODAL LOGIC ---
+    const modalOverlay = document.getElementById('property-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const propertiesTbody = document.getElementById('properties-tbody');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    const openPropertyModal = (block) => {
+        modalTitle.textContent = `${block.name} - Available Properties`;
+        propertiesTbody.innerHTML = '';
+        
+        const availableProps = block.properties ? block.properties.filter(prop => prop.status === 'Empty') : [];
+
+        if (availableProps.length > 0) {
+            availableProps.forEach(prop => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${prop.address}</td>
+                    <td><span class="card-status-badge" style="background-color: var(--available-color); color: #000;">Available</span></td>
+                    <td>${prop.interior}</td>
+                    <td class="financial-value">${prop.storage ? prop.storage.toLocaleString() + ' su' : '0 su'}</td>
+                `;
+                propertiesTbody.appendChild(tr);
+            });
+        } else {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td colspan="4" style="text-align: center; padding: 20px;">No available properties found.</td>`;
+            propertiesTbody.appendChild(tr);
+        }
+
+        modalOverlay.classList.add('visible');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling underneath
+    };
+
+    const closePropertyModal = () => {
+        modalOverlay.classList.remove('visible');
+        document.body.style.overflow = 'auto';
+    };
+
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closePropertyModal);
+    }
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closePropertyModal();
+        });
+    }
 
     // --- EVENT LISTENERS ---
 

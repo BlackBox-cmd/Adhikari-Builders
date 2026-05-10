@@ -108,6 +108,28 @@
     </footer>
 
 
+    <!-- Property Details Modal -->
+    <div id="property-modal" class="modal-overlay">
+        <div class="modal-panel">
+            <button class="modal-close" id="close-modal-btn">&times;</button>
+            <h2 id="modal-title">Property Details</h2>
+            <div class="table-container" style="overflow-x: auto;">
+                <table class="properties-table">
+                    <thead>
+                        <tr>
+                            <th>Address</th>
+                            <th>Status</th>
+                            <th>Interior</th>
+                            <th>Storage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="properties-tbody">
+                        <!-- Rows injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
