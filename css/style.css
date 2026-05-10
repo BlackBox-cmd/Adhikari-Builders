@@ -413,12 +413,48 @@ body.light-mode .discord-button {
 /* --- Footer --- */
 .footer {
     background-color: var(--panel-color);
-    text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
     margin-top: 80px;
     border-top: 1px solid var(--border-color);
     color: var(--text-secondary);
     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: var(--text-primary);
+    font-family: var(--font-secondary);
+    margin: 0 0 5px 0;
+    font-size: 1.5rem;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-right p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.dev-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.dev-link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
 }
 
 /* --- Theme Switch --- */
