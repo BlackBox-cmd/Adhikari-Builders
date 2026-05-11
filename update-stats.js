@@ -21,7 +21,12 @@ const storageMap = {
     "Trevor's Trailer": 2250,
     "Michael's Mansion": 15000,
     "Motel": 1500,
-    "Mid-End Apartment (House)": 7500
+    "Mid-End Apartment (House)": 7500,
+    "Low-End Apartment": 3750,
+    "High-End Apartment": 15000,
+    "Franklin's House": 6000,
+    "Lester's House": 5250,
+    "Mid-End Apartment": 7500 
 };
 
 function parseCurrency(str) {
