@@ -879,7 +879,7 @@ const teamMembers = [
         name: "Freak Carlos",
         role: "COO / CTO",
         phone: "262-3261",
-        image: "https://i.postimg.cc/V6WgkjxT/image.png"
+        image: "assets/Freak-Carlos.webp"
     },
     {
         name: "Taz Shayal",
@@ -897,6 +897,6 @@ const teamMembers = [
         name: "Munshi Jr",
         role: "Realtor",
         phone: "559-3942",
-        image: "https://i.postimg.cc/BQ17WLrC/Munshi-Jr.png"
+        image: "assets/Munshi-Jr.png"
     }
 ];

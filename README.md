@@ -13,8 +13,8 @@ This repository contains the source code for the Adhikari Builders website. Plea
 ## Features
 
 *   **Immersive UI/UX**: Dark theme with gold accents, minimalist design, cards, panels, and subtle animations, inspired by FiveM / GTA NUI aesthetics.
-*   **Dynamic Property Blocks**: Browse available housing blocks with key details. Click on a block to view a detailed list of individual units within a popup modal, including type, storage capacity, max occupancy, and rent.
-*   **Dynamic Data Management**: All property blocks and unit details are loaded from a simple `js/data.js` file, making it easy to update listings without touching the main code.
+*   **Dynamic Property Blocks**: Browse available housing blocks with key details. Click on a block to view a detailed list of individual properties within a popup modal, including renter status, interior type, income, and storage.
+*   **Dynamic Data Management**: All property blocks and tenant details are loaded from `js/data.js`. Data is automatically generated from `renters.csv` via a Node.js script, making it easy to manage large property portfolios.
 *   **Day/Night Mode Toggle**: Switch between a dark (default) and a light theme with a convenient toggle in the navigation bar. Your preference is saved locally.
 *   **Meet Our Team**: A dedicated section showcasing our professional real estate experts with their roles and contact information.
 *   **Rules & Information**: Clear guidelines for tenants to ensure a smooth and RP-compliant housing experience.
@@ -31,11 +31,11 @@ To view the Adhikari Builders website locally:
 
 ## Customization
 
-### Property Listings & Units
-All property block and unit data can be found and easily modified in `js/data.js`.
-*   **`propertyBlocks`**: Each object represents a housing block with `name`, `location`, `image`, and an `units` array.
-*   **`units`**: Each object within the `units` array defines a specific unit with `type`, `storage`, `max_capacity`, and `rent`.
-*   **`availableUnits`**: Update this field as a string (e.g., "3/12") directly in `js/data.js` for each block to reflect current availability.
+### Property Listings & Data Management
+Property block and tenant data is managed via a centralized CSV file to simplify updates.
+1.  **`renters.csv`**: Update tenant information, statuses, and property types in this CSV file.
+2.  **`update-stats.js`**: Run `node update-stats.js` to automatically parse the CSV, calculate total income/storage, and update `js/data.js`.
+3.  **`js/data.js`**: Contains the `propertyBlocks` array which powers the UI. Each block includes calculated fields (`occupiedProperties`, `income`, `cost`, `storage`) and a `properties` array detailing individual units.
 
 ### Team Members
 Team member information is located in the `teamMembers` array within `js/data.js`. You can update names, roles, phone numbers, and profile images here.
@@ -48,13 +48,18 @@ The primary Gold and Black theme (and the light mode alternatives) are defined u
 
 ## Deployment
 
-This website is a static site and can be deployed on any static site hosting service, such as Cloudflare Pages, Netlify, Vercel, or GitHub Pages. Simply upload the entire project folder.
+This project uses Cloudflare Pages via Wrangler for deployment, with automated build scripts defined in `package.json`.
+
+1.  Ensure you have Node.js installed.
+2.  Install dependencies: `npm install`
+3.  Deploy to Cloudflare: `npm run deploy` (this will automatically build the `dist` folder and deploy it using Wrangler).
 
 ## Technologies Used
 
-*   **HTML5**: Structure and content.
-*   **CSS3**: Styling and responsiveness.
-*   **JavaScript (ES6+)**: Dynamic content loading, modal functionality, and theme toggling.
+*   **HTML5 & CSS3**: Structure, styling, and responsiveness.
+*   **JavaScript (ES6+)**: Dynamic UI, modal functionality, and data processing.
+*   **Node.js**: Backend scripting (`update-stats.js`) to parse CSV data into JSON.
+*   **Cloudflare Wrangler**: CLI for automated static site deployment.
 
 ## Contact & Support
 
