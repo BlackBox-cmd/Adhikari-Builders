@@ -1,0 +1,47 @@
+name: Update Renters Data Every 12 Hours
+
+on:
+  schedule:
+    # Runs at 00:00 and 12:00 UTC every day
+    - cron: '0 0,12 * * *'
+  # Allows you to trigger the workflow manually from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-data-and-deploy:
+    runs-on: ubuntu-latest
+    
+    # We need permission to push the updated CSV back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch CSV from Google Sheets
+        run: |
+          curl -L "https://docs.google.com/spreadsheets/d/1fH_cyrYCtPhP_wQnJ5jwzQt4E15Gkva7H4_eJ05sH7Y/export?format=csv&gid=0" -o renters.csv
+
+      - name: Update stats in data.js
+        run: node update-stats.js
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update: Sync renters data from Google Sheets"
+          file_pattern: "renters.csv js/data.js"
+          
+      - name: Deploy to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npm run deploy
