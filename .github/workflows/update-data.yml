@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -35,12 +36,14 @@ jobs:
         run: node update-stats.js
 
       - name: Commit and Push changes
+        id: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-update: Sync renters data from Google Sheets"
           file_pattern: "renters.csv js/data.js"
           
       - name: Deploy to Cloudflare
+        if: steps.auto-commit.outputs.changes_detected == 'true' || github.event_name == 'workflow_dispatch'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
