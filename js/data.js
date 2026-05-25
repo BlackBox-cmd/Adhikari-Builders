@@ -2,8 +2,8 @@ const propertyBlocks = [
     {
         id: 2,
         name: "Forum Dr. Apt. Complex B",
-        occupiedProperties: "16/20",
-        income: 41501,
+        occupiedProperties: "11/20",
+        income: 27001,
         cost: 30000,
         image: "https://i.postimg.cc/HnRRpwSM/Forum_Dr_Apt_Complex_B.png",
         storage: 60000,
@@ -19,7 +19,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 5/16/2026",
+                status: "Overdue",
                 address: "Forum Drive 2 / Apt2",
                 interior: "Janitor Apartment",
                 renterName: "Bunny Deville",
@@ -29,12 +29,12 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Empty",
                 address: "Forum Drive 2 / Apt3",
                 interior: "Janitor Apartment",
-                renterName: "Logan Ward",
-                phone: "344-1317",
-                income: 3000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1500,
                 storage: 3000
             },
@@ -49,17 +49,17 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Evictable",
+                status: "Empty",
                 address: "Forum Drive 2 / Apt5",
                 interior: "Janitor Apartment",
-                renterName: "Cutter Saif",
-                phone: "946-7478",
-                income: 3000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1500,
                 storage: 3000
             },
             {
-                status: "Paid 5/12/2026",
+                status: "Paid 5/19/2026",
                 address: "Forum Drive 2 / Apt6",
                 interior: "Janitor Apartment",
                 renterName: "Freak Carlos",
@@ -69,12 +69,12 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Empty",
                 address: "Forum Drive 2 / Apt7",
                 interior: "Janitor Apartment",
-                renterName: "Fallen Sky",
-                phone: "171-7764",
-                income: 2500,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1500,
                 storage: 3000
             },
@@ -89,18 +89,8 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
-                address: "Forum Drive 2 / Apt9",
-                interior: "Janitor Apartment",
-                renterName: "Tillu Galoch",
-                phone: "234-0177",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
                 status: "Empty",
-                address: "Forum Drive 2 / Apt10",
+                address: "Forum Drive 2 / Apt9",
                 interior: "Janitor Apartment",
                 renterName: "N/A",
                 phone: "N/A",
@@ -109,7 +99,17 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 5/17/2026",
+                status: "Overdue",
+                address: "Forum Drive 2 / Apt10",
+                interior: "Janitor Apartment",
+                renterName: "Boshunia Mohammad",
+                phone: "563-6683",
+                income: 3000,
+                cost: 1500,
+                storage: 3000
+            },
+            {
+                status: "Overdue",
                 address: "Forum Drive 2 / Apt12",
                 interior: "Janitor Apartment",
                 renterName: "Ahmed Ferdous",
@@ -139,7 +139,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Evictable",
                 address: "Forum Drive 2 / Apt15",
                 interior: "Janitor Apartment",
                 renterName: "Xenom Cortez",
@@ -149,17 +149,17 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Empty",
                 address: "Forum Drive 2 / Apt16",
                 interior: "Janitor Apartment",
-                renterName: "John Marston",
-                phone: "491-0176",
-                income: 3000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1500,
                 storage: 3000
             },
             {
-                status: "Paid 5/13/2026",
+                status: "Overdue",
                 address: "Forum Drive 2 / Apt17",
                 interior: "Janitor Apartment",
                 renterName: "Rotax Kit",
@@ -169,12 +169,12 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Evictable",
+                status: "Empty",
                 address: "Forum Drive 2 / Apt18",
                 interior: "Janitor Apartment",
-                renterName: "Cutter Saif",
-                phone: "946-7478",
-                income: 3000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1500,
                 storage: 3000
             },
@@ -199,7 +199,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 5/13/2026",
+                status: "Overdue",
                 address: "Forum Drive 2 / Apt21",
                 interior: "Janitor Apartment",
                 renterName: "Felix Delgado",
@@ -213,19 +213,19 @@ const propertyBlocks = [
     {
         id: 163,
         name: "Niland Avenue",
-        occupiedProperties: "8/8",
-        income: 14251,
+        occupiedProperties: "7/8",
+        income: 14250,
         cost: 8000,
         image: "https://i.postimg.cc/kGzznQjQ/Niland_Avenue.png",
         storage: 18000,
         properties: [
             {
-                status: "Overdue",
+                status: "Empty",
                 address: "Niland Avenue 1",
                 interior: "Trevor's Trailer",
-                renterName: "Jimmy Kataria",
-                phone: "205-4944",
-                income: 1,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1000,
                 storage: 2250
             },
@@ -240,7 +240,7 @@ const propertyBlocks = [
                 storage: 2250
             },
             {
-                status: "Paid 5/14/2026",
+                status: "Overdue",
                 address: "Niland Avenue 3",
                 interior: "Trevor's Trailer",
                 renterName: "Hamza Khan",
@@ -270,7 +270,7 @@ const propertyBlocks = [
                 storage: 2250
             },
             {
-                status: "Paid 5/13/2026",
+                status: "Overdue",
                 address: "Niland Avenue 6",
                 interior: "Trevor's Trailer",
                 renterName: "Xenom Cortez",
@@ -305,13 +305,13 @@ const propertyBlocks = [
         id: 66,
         name: "Steele Way",
         occupiedProperties: "4/6",
-        income: 32300,
+        income: 34300,
         cost: 48000,
         image: "https://i.postimg.cc/C5XXFGvC/Steele_Way.png",
         storage: 90000,
         properties: [
             {
-                status: "Paid 5/16/2026",
+                status: "Paid 5/23/2026",
                 address: "Steele Way 1",
                 interior: "Michael's Mansion",
                 renterName: "Nr Badhan",
@@ -321,7 +321,7 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Overdue",
+                status: "Paid 5/21/2026",
                 address: "Steele Way 2",
                 interior: "Michael's Mansion",
                 renterName: "Freak Carlos",
@@ -331,7 +331,7 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Paid 5/14/2026",
+                status: "Paid 10/29/2026",
                 address: "Steele Way 3",
                 interior: "Michael's Mansion",
                 renterName: "Munshi Jr",
@@ -341,12 +341,12 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Evictable",
+                status: "Empty",
                 address: "Steele Way 4",
                 interior: "Michael's Mansion",
-                renterName: "Cutter Saif",
-                phone: "946-7478",
-                income: 8000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 8000,
                 storage: 15000
             },
@@ -361,12 +361,12 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Empty",
+                status: "Paid 5/21/2026",
                 address: "Steele Way 6",
                 interior: "Michael's Mansion",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Akkhar Adhikari",
+                phone: "488-1724",
+                income: 10000,
                 cost: 8000,
                 storage: 15000
             }
@@ -375,14 +375,14 @@ const propertyBlocks = [
     {
         id: 37,
         name: "Nikola Avenue",
-        occupiedProperties: "6/6",
-        income: 48500,
+        occupiedProperties: "5/6",
+        income: 38500,
         cost: 31500,
         image: "https://i.postimg.cc/BbkkqTh2/Nikola_Avenue.png",
         storage: 55500,
         properties: [
             {
-                status: "Paid 5/18/2026",
+                status: "Paid 6/1/2026",
                 address: "Nikola Avenue 1",
                 interior: "Michael's Mansion",
                 renterName: "Judgement Carter",
@@ -392,22 +392,22 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Evictable",
+                status: "Paid 5/21/2026",
                 address: "Nikola Avenue 2",
                 interior: "Trevor's Beach House",
-                renterName: "Zeus Demarco",
-                phone: "275-0784",
-                income: 8000,
+                renterName: "Nexus Andree",
+                phone: "863-6423",
+                income: 7000,
                 cost: 5000,
                 storage: 9000
             },
             {
-                status: "Evictable",
+                status: "Empty",
                 address: "Nikola Avenue 3",
                 interior: "Trevor's Beach House",
-                renterName: "Nexus Andree",
-                phone: "863-6423",
-                income: 9000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 5000,
                 storage: 9000
             },
@@ -422,7 +422,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/18/2026",
+                status: "Paid 5/25/2026",
                 address: "Nikola Avenue 5",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Nr Badhan",
@@ -432,7 +432,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/15/2026",
+                status: "Overdue",
                 address: "Nikola Avenue 6",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Roy Vahi",
@@ -473,7 +473,7 @@ const propertyBlocks = [
                 storage: 1500
             },
             {
-                status: "Paid 5/16/2026",
+                status: "Paid 5/23/2026",
                 address: "Eclipse Boulevard 3 / Apt1",
                 interior: "Motel",
                 renterName: "Sumsul Arefin",
@@ -493,7 +493,7 @@ const propertyBlocks = [
                 storage: 1500
             },
             {
-                status: "Paid 5/23/2026",
+                status: "Paid 5/30/2026",
                 address: "Eclipse Boulevard 3 / Apt3",
                 interior: "Motel",
                 renterName: "Sumsul Arefin",
@@ -543,7 +543,7 @@ const propertyBlocks = [
                 storage: 1500
             },
             {
-                status: "Paid 5/23/2026",
+                status: "Paid 5/30/2026",
                 address: "Eclipse Boulevard 7",
                 interior: "Motel",
                 renterName: "Sumsul Arefin",
@@ -551,207 +551,6 @@ const propertyBlocks = [
                 income: 2500,
                 cost: 500,
                 storage: 1500
-            }
-        ]
-    },
-    {
-        id: 3,
-        name: "Forum Dr. Apt. Complex C",
-        occupiedProperties: "15/19",
-        income: 27505,
-        cost: 28500,
-        image: "https://i.postimg.cc/tJwwX3rx/Forum_Dr_Apt_Complex_C.png",
-        storage: 57000,
-        properties: [
-            {
-                status: "Overdue",
-                address: "Forum Drive 3 / Apt1",
-                interior: "Janitor Apartment",
-                renterName: "Pablo Escobar",
-                phone: "987-9002",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Overdue",
-                address: "Forum Drive 3 / Apt1",
-                interior: "Janitor Apartment",
-                renterName: "Anthony Spero",
-                phone: "730-2745",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/16/2026",
-                address: "Forum Drive 3 / Apt2",
-                interior: "Janitor Apartment",
-                renterName: "Abhimannu Das",
-                phone: "696-9911",
-                income: 1500,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Overdue",
-                address: "Forum Drive 3 / Apt3",
-                interior: "Janitor Apartment",
-                renterName: "Arthur Shelby",
-                phone: "149-8984",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/16/2026",
-                address: "Forum Drive 3 / Apt4",
-                interior: "Janitor Apartment",
-                renterName: "Topu Khan",
-                phone: "328-7168",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Empty",
-                address: "Forum Drive 3 / Apt5",
-                interior: "Janitor Apartment",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/13/2026",
-                address: "Forum Drive 3 / Apt6",
-                interior: "Janitor Apartment",
-                renterName: "Felix Delgado",
-                phone: "105-7309",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Empty",
-                address: "Forum Drive 3 / Apt7",
-                interior: "Janitor Apartment",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 6/10/2026",
-                address: "Forum Drive 3 / Apt8",
-                interior: "Janitor Apartment",
-                renterName: "Raghavendra Yadav",
-                phone: "112-4892",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Overdue",
-                address: "Forum Drive 3 / Apt10",
-                interior: "Janitor Apartment",
-                renterName: "Anthony Spero",
-                phone: "730-2745",
-                income: 3000,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Empty",
-                address: "Forum Drive 3 / Apt10",
-                interior: "Janitor Apartment",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/16/2026",
-                address: "Forum Drive 3 / Apt11",
-                interior: "Janitor Apartment",
-                renterName: "Pasha Vai",
-                phone: "456-3006",
-                income: 1,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/15/2026",
-                address: "Forum Drive 3 / Apt12",
-                interior: "Janitor Apartment",
-                renterName: "Michale Executioner",
-                phone: "929-4879",
-                income: 1,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Empty",
-                address: "Forum Drive 3 / Apt13",
-                interior: "Janitor Apartment",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Overdue",
-                address: "Forum Drive 3 / Apt14",
-                interior: "Janitor Apartment",
-                renterName: "Xenom Cortez",
-                phone: "120-7012",
-                income: 2500,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/14/2026",
-                address: "Forum Drive 3 / Apt15",
-                interior: "Janitor Apartment",
-                renterName: "Abbas Ali",
-                phone: "389-3951",
-                income: 2500,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/15/2026",
-                address: "Forum Drive 3 / Apt16",
-                interior: "Janitor Apartment",
-                renterName: "Choto Don",
-                phone: "809-2518",
-                income: 1,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/15/2026",
-                address: "Forum Drive 3 / Apt17",
-                interior: "Janitor Apartment",
-                renterName: "Musfik Sfgy",
-                phone: "154-8242",
-                income: 1,
-                cost: 1500,
-                storage: 3000
-            },
-            {
-                status: "Paid 5/15/2026",
-                address: "Forum Drive 3 / Apt18",
-                interior: "Janitor Apartment",
-                renterName: "Chandu Muskil",
-                phone: "143-4205",
-                income: 1,
-                cost: 1500,
-                storage: 3000
             }
         ]
     },
@@ -765,7 +564,7 @@ const propertyBlocks = [
         storage: 75000,
         properties: [
             {
-                status: "Paid 5/16/2026",
+                status: "Overdue",
                 address: "Brouge Avenue 1",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Abijah Fowler",
@@ -775,7 +574,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/11/2026",
+                status: "Evictable",
                 address: "Brouge Avenue 2",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Lucifer Moningstar",
@@ -785,7 +584,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/11/2026",
+                status: "Evictable",
                 address: "Brouge Avenue 3",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Lucifer Moningstar",
@@ -795,7 +594,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/11/2026",
+                status: "Paid 5/25/2026",
                 address: "Brouge Avenue 4",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Lucifer Moningstar",
@@ -805,7 +604,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/11/2026",
+                status: "Overdue",
                 address: "Brouge Avenue 5",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Lucifer Moningstar",
@@ -815,7 +614,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/16/2026",
+                status: "Paid 5/23/2026",
                 address: "Brouge Avenue 6",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Abijah Fowler",
@@ -825,7 +624,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/18/2026",
+                status: "Paid 6/1/2026",
                 address: "Brouge Avenue 7",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Hafijur Khan",
@@ -835,7 +634,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/11/2026",
+                status: "Paid 5/25/2026",
                 address: "Brouge Avenue 8",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Mahin Yakari",
@@ -845,7 +644,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/18/2026",
+                status: "Paid 5/25/2026",
                 address: "Brouge Avenue 9",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Sam Taylor",
@@ -855,7 +654,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 5/11/2026",
+                status: "Overdue",
                 address: "Brouge Avenue 10",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Nahi Tarzan",

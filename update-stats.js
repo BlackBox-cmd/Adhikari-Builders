@@ -29,6 +29,16 @@ const storageMap = {
     "Mid-End Apartment": 7500 
 };
 
+// Helper to extract prefix from address
+function getAddressPrefix(address) {
+    if (!address) return '';
+    if (address.includes('/')) {
+        return address.split('/')[0].trim();
+    }
+    // Remove trailing house numbers like "1", "10", "12B", "12a"
+    return address.replace(/\s+\d+[a-zA-Z]?$/, '').trim();
+}
+
 function parseCurrency(str) {
     if (!str) return 0;
     return parseInt(str.replace(/[\$,]/g, ''), 10) || 0;
@@ -40,6 +50,30 @@ function processCSV() {
     
     // Skip header
     const dataLines = lines.slice(1);
+
+    // Dynamically discover any new prefixes from the CSV and add to prefixMap
+    dataLines.forEach(line => {
+        const cols = line.split(',');
+        if (cols.length < 2) return;
+        const address = cols[1].trim();
+        if (address) {
+            // Check if the address already matches an existing prefix
+            let matchesExisting = false;
+            for (const existingPrefix of Object.keys(prefixMap)) {
+                if (address.startsWith(existingPrefix)) {
+                    matchesExisting = true;
+                    break;
+                }
+            }
+            if (!matchesExisting) {
+                const prefix = getAddressPrefix(address);
+                if (prefix && !prefixMap[prefix]) {
+                    prefixMap[prefix] = prefix;
+                    console.log(`Detected new address prefix in CSV: "${prefix}"`);
+                }
+            }
+        }
+    });
 
     const stats = {};
     for (const key of Object.values(prefixMap)) {
@@ -114,20 +148,53 @@ function updateDataJs(stats) {
     // Safely evaluate the array
     eval(`blocks = ${match[1]}`);
 
-    // Update stats
+    // Update stats and filter out missing blocks
+    const filteredBlocks = [];
     blocks.forEach(block => {
         const stat = stats[block.name];
-        if (stat) {
+        if (stat && stat.total > 0) {
             block.occupiedProperties = `${stat.occupied}/${stat.total}`;
             block.income = stat.income;
             block.cost = stat.cost;
             block.storage = stat.storage;
             block.properties = stat.properties;
+            filteredBlocks.push(block);
+        } else {
+            console.log(`Removing block "${block.name}" because it is missing in renters.csv.`);
         }
     });
 
+    const existingBlockNames = new Set(filteredBlocks.map(b => b.name));
+
+    // Find the highest ID to assign new unique IDs
+    let maxId = 0;
+    filteredBlocks.forEach(b => {
+        if (b.id && b.id > maxId) {
+            maxId = b.id;
+        }
+    });
+
+    // Check for any new blocks in stats
+    for (const [name, stat] of Object.entries(stats)) {
+        if (stat.total > 0 && !existingBlockNames.has(name)) {
+            maxId += 1;
+            const newBlock = {
+                id: maxId,
+                name: name,
+                occupiedProperties: `${stat.occupied}/${stat.total}`,
+                income: stat.income,
+                cost: stat.cost,
+                image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80", // Premium building placeholder
+                storage: stat.storage,
+                properties: stat.properties
+            };
+            filteredBlocks.push(newBlock);
+            console.log(`Automatically added new block to website: "${name}" (Block #${maxId})`);
+        }
+    }
+
     // Format back to string
-    let newBlocksString = JSON.stringify(blocks, null, 4);
+    let newBlocksString = JSON.stringify(filteredBlocks, null, 4);
     // Remove quotes from keys
     newBlocksString = newBlocksString.replace(/"([^"]+)":/g, '$1:');
 

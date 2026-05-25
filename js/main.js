@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openPropertyModal = (block) => {
         modalTitle.textContent = `${block.name} - Available Properties`;
         propertiesTbody.innerHTML = '';
-        
+
         const availableProps = block.properties ? block.properties.filter(prop => prop.status === 'Empty') : [];
 
         if (availableProps.length > 0) {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         } else {
             const tr = document.createElement('tr');
-            tr.innerHTML = `<td colspan="4" style="text-align: center; padding: 20px;">No available properties found.</td>`;
+            tr.innerHTML = `<td colspan="4" style="text-align: center; padding: 20px;">No available properties found, all are Sold Out </td>`;
             propertiesTbody.appendChild(tr);
         }
 
