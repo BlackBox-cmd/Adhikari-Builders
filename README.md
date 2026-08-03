@@ -33,9 +33,20 @@ To view the Adhikari Builders website locally:
 
 ### Property Listings & Data Management
 Property block and tenant data is managed via a centralized CSV file to simplify updates.
-1.  **`renters.csv`**: Update tenant information, statuses, and property types in this CSV file.
-2.  **`update-stats.js`**: Run `node update-stats.js` to automatically parse the CSV, calculate total income/storage, and update `js/data.js`.
-3.  **`js/data.js`**: Contains the `propertyBlocks` array which powers the UI. Each block includes calculated fields (`occupiedProperties`, `income`, `cost`, `storage`) and a `properties` array detailing individual units.
+
+#### Update Process
+1.  **Edit `renters.csv`**: Update tenant information, statuses, and property types in this CSV file.
+    - **CSV Columns**: `Status,Address,Interior,Renter CID,Renter Name,Phone,Income,Cost`
+    - **Status Values**: `Paid`, `Overdue`, `Evictable`, `Empty`
+    - **Income/Cost Format**: Use `$` prefix with commas for thousands (e.g., `$1,500`)
+    - **Empty Units**: Use `N/A` for Renter CID, Renter Name, and Phone
+2.  **Run the Update Script**: Execute `node update-stats.js` to automatically parse the CSV, calculate total income/storage, and update `js/data.js`.
+    - The script dynamically detects new property blocks from the CSV and adds them to the website
+    - Blocks no longer present in the CSV are automatically removed
+    - Console output shows any new blocks detected or blocks removed
+3.  **Verify `js/data.js`**: Contains the `propertyBlocks` array which powers the UI. Each block includes calculated fields (`occupiedProperties`, `income`, `cost`, `storage`) and a `properties` array detailing individual units.
+4.  **Rebuild the Site**: Run `npm run build` to regenerate the `dist/` folder with updated data.
+5.  **Deploy (Optional)**: Run `npm run deploy` to deploy the updated site to Cloudflare Pages.
 
 ### Team Members
 Team member information is located in the `teamMembers` array within `js/data.js`. You can update names, roles, phone numbers, and profile images here.
@@ -66,4 +77,4 @@ This project uses Cloudflare Pages via Wrangler for deployment, with automated b
 For in-game inquiries, please visit our office in Los Santos. For Discord support and community engagement, please use the "Join Discord" button on our website.
 
 ---
-© Adhikari Builders — GTA V RP
+© Adhikari Builders — Mr_Freak_cmd

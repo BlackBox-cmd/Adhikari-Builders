@@ -184,7 +184,7 @@ function updateDataJs(stats) {
                 occupiedProperties: `${stat.occupied}/${stat.total}`,
                 income: stat.income,
                 cost: stat.cost,
-                image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80", // Premium building placeholder
+                image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png", // Premium building placeholder
                 storage: stat.storage,
                 properties: stat.properties
             };
