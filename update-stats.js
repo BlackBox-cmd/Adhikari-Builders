@@ -15,6 +15,18 @@ const prefixMap = {
     'Brouge Avenue': 'Brouge Avenue'
 };
 
+// Mapping from property names to their image URLs
+const imageMap = {
+    'Clinton Ave': 'https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png',
+    'Forum Dr. Apt. Complex B': 'https://i.postimg.cc/p2Xh1KdK/Forum-Drive-2.png',
+    'Niland Avenue': 'https://i.postimg.cc/nzXhK8dZ/Niland-Avenue.png',
+    'Steele Way': 'https://i.postimg.cc/wMvRpLdK/Steele-Way.png',
+    'Nikola Avenue': 'https://i.postimg.cc/KjX2L9dZ/Nikola-Avenue.png',
+    'Eclipse Boulevard': 'https://i.postimg.cc/qqX9M2dK/Eclipse-Boulevard.png',
+    'Forum Dr. Apt. Complex C': 'https://i.postimg.cc/t4X5N3dZ/Forum-Drive-3.png',
+    'Brouge Avenue': 'https://i.postimg.cc/ZqX8P7dK/Brouge-Avenue.png'
+};
+
 const storageMap = {
     "Janitor Apartment": 3000,
     "Trevor's Beach House": 9000,
@@ -223,7 +235,7 @@ function updateDataJs(stats) {
                 occupiedProperties: `${stat.occupied}/${stat.total}`,
                 income: stat.income,
                 cost: stat.cost,
-                image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png", // Premium building placeholder
+                image: imageMap[name] || "https://via.placeholder.com/400x300?text=" + encodeURIComponent(name), // Use property-specific image or placeholder
                 storage: stat.storage,
                 properties: stat.properties
             };

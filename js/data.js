@@ -922,9 +922,9 @@ const teamMembers = [
         image: "assets/Freak-Carlos.webp"
     },
     {
-        name: "Bernard Arnault",
-        role: "COO / CTO",
-        phone: "262-3261",
+        name: "Anthony Spero",
+        role: "Manager",
+        phone: "730-2745",
         image: "assets/Freak-Carlos.webp"
     },
     {
