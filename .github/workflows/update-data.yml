@@ -33,11 +33,30 @@ jobs:
       - name: Fetch CSV from Google Sheets
         run: |
           curl -L "https://docs.google.com/spreadsheets/d/1cRmN8s2aYvgFYztTH2QC4zm9IxjtAl9FgABQMD0R1Kw/export?format=csv&gid=0" -o renters_raw.csv
+          echo "✓ Downloaded renters_raw.csv"
+          ls -lh renters_raw.csv
           # Clean up the malformed CSV export from Google Sheets
           node scripts/clean-csv.js
+          echo "✓ Cleaned CSV file"
+          ls -lh renters.csv
+          head -5 renters.csv
 
       - name: Update stats in data.js
-        run: node update-stats.js
+        run: |
+          echo "=== CSV File Check ==="
+          echo "renters.csv exists: $(test -f renters.csv && echo 'yes' || echo 'no')"
+          echo "renters_raw.csv exists: $(test -f renters_raw.csv && echo 'yes' || echo 'no')"
+          if [ -f renters.csv ]; then
+            echo "renters.csv line count: $(wc -l < renters.csv)"
+            echo "First 3 lines:"
+            head -3 renters.csv
+          fi
+          echo ""
+          echo "=== Running update-stats.js ==="
+          node update-stats.js
+          echo ""
+          echo "=== Checking updated data.js ==="
+          echo "data.js file size: $(wc -c < js/data.js)"
 
       - name: Commit and Push changes
         id: auto-commit

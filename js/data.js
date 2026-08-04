@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const propertyBlocks = [
     {
         id: 164,
@@ -908,9 +907,6 @@ const propertyBlocks = [
         ]
     }
 ];
-=======
-const propertyBlocks = [];
->>>>>>> 0388123f4c51ef02952b8644a5637830e4a1c3ae
 
 const teamMembers = [
     {

@@ -15,7 +15,20 @@ const inputPath = path.join(__dirname, '..', 'renters_raw.csv');
 const outputPath = path.join(__dirname, '..', 'renters.csv');
 
 try {
+    // Check if input file exists
+    if (!fs.existsSync(inputPath)) {
+        console.error(`✗ Input file not found: ${inputPath}`);
+        process.exit(1);
+    }
+
     const rawContent = fs.readFileSync(inputPath, 'utf8');
+    
+    // Check if file is empty
+    if (!rawContent || rawContent.trim().length === 0) {
+        console.error('✗ Input file is empty');
+        process.exit(1);
+    }
+
     // Split by newlines but preserve the ability to handle different line endings
     const lines = rawContent.split(/\r?\n/);
     
@@ -32,6 +45,18 @@ try {
         })
         .filter(line => line.length > 0); // Remove empty lines
     
+    // Check if we have data after cleaning
+    if (cleanedLines.length === 0) {
+        console.error('✗ No data found after cleaning');
+        process.exit(1);
+    }
+
+    // Verify first line looks like a header
+    if (!cleanedLines[0].includes('Status') && !cleanedLines[0].includes('Address')) {
+        console.error('✗ First line does not appear to be a valid header:', cleanedLines[0]);
+        process.exit(1);
+    }
+
     // Write the cleaned CSV
     const cleanedContent = cleanedLines.join('\n');
     fs.writeFileSync(outputPath, cleanedContent, 'utf8');
@@ -40,7 +65,7 @@ try {
     console.log(`  Input: ${inputPath}`);
     console.log(`  Output: ${outputPath}`);
     console.log(`  Lines: ${cleanedLines.length}`);
-    console.log(`  First line: ${cleanedLines[0]}`);
+    console.log(`  First line: ${cleanedLines[0].substring(0, 80)}...`);
     
 } catch (error) {
     console.error('✗ Error cleaning CSV:', error.message);
