@@ -32,9 +32,13 @@ jobs:
 
       - name: Fetch CSV from Google Sheets
         run: |
+<<<<<<< HEAD
           curl -L "https://docs.google.com/spreadsheets/d/1cRmN8s2aYvgFYztTH2QC4zm9IxjtAl9FgABQMD0R1Kw/export?format=csv&gid=0" -o renters_raw.csv
           # Clean up the malformed CSV export from Google Sheets
           node scripts/clean-csv.js
+=======
+          curl -L "https://docs.google.com/spreadsheets/d/1cRmN8s2aYvgFYztTH2QC4zm9IxjtAl9FgABQMD0R1Kw/export?format=csv&gid=0" -o renters.csv
+>>>>>>> 0388123f4c51ef02952b8644a5637830e4a1c3ae
 
       - name: Update stats in data.js
         run: node update-stats.js
