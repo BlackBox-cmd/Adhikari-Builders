@@ -1,6 +1,6 @@
 const propertyBlocks = [
     {
-        id: 164,
+        id: 186,
         name: "Clinton Ave",
         occupiedProperties: "23/23",
         income: 50025,
@@ -241,7 +241,7 @@ const propertyBlocks = [
         ]
     },
     {
-        id: 165,
+        id: 2,
         name: "Forum Dr. Apt. Complex B",
         occupiedProperties: "19/20",
         income: 18171,
@@ -452,7 +452,7 @@ const propertyBlocks = [
         ]
     },
     {
-        id: 166,
+        id: 163,
         name: "Niland Avenue",
         occupiedProperties: "3/8",
         income: 5251,
@@ -543,7 +543,7 @@ const propertyBlocks = [
         ]
     },
     {
-        id: 167,
+        id: 66,
         name: "Steele Way",
         occupiedProperties: "6/6",
         income: 47800,
@@ -614,7 +614,7 @@ const propertyBlocks = [
         ]
     },
     {
-        id: 168,
+        id: 37,
         name: "Nikola Avenue",
         occupiedProperties: "6/6",
         income: 41500,
@@ -685,7 +685,7 @@ const propertyBlocks = [
         ]
     },
     {
-        id: 169,
+        id: 77,
         name: "Eclipse Boulevard",
         occupiedProperties: "5/10",
         income: 17001,
@@ -796,7 +796,7 @@ const propertyBlocks = [
         ]
     },
     {
-        id: 170,
+        id: 16,
         name: "Brouge Avenue",
         occupiedProperties: "10/10",
         income: 57000,
