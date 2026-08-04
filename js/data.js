@@ -5,7 +5,7 @@ const propertyBlocks = [
         occupiedProperties: "23/23",
         income: 50025,
         cost: 35000,
-        image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png",
+        image: "assets/Blocks/Clinton-Ave.png",
         storage: 69750,
         properties: [
             {
@@ -246,7 +246,7 @@ const propertyBlocks = [
         occupiedProperties: "19/20",
         income: 18171,
         cost: 30000,
-        image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png",
+        image: "assets/Blocks/Forum-Dr-Apt-Complex-B.png",
         storage: 60000,
         properties: [
             {
@@ -457,7 +457,7 @@ const propertyBlocks = [
         occupiedProperties: "3/8",
         income: 5251,
         cost: 8000,
-        image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png",
+        image: "assets/Blocks/Niland-Avenue.png",
         storage: 18000,
         properties: [
             {
@@ -548,7 +548,7 @@ const propertyBlocks = [
         occupiedProperties: "6/6",
         income: 47800,
         cost: 48000,
-        image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png",
+        image: "assets/Blocks/Steele-Way.png",
         storage: 90000,
         properties: [
             {
@@ -619,7 +619,7 @@ const propertyBlocks = [
         occupiedProperties: "6/6",
         income: 41500,
         cost: 31500,
-        image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png",
+        image: "assets/Blocks/Nikola-Avenue.png",
         storage: 55500,
         properties: [
             {
@@ -690,7 +690,7 @@ const propertyBlocks = [
         occupiedProperties: "5/10",
         income: 17001,
         cost: 14000,
-        image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png",
+        image: "assets/Blocks/Eclipse-Boulevard.png",
         storage: 30000,
         properties: [
             {
@@ -801,7 +801,7 @@ const propertyBlocks = [
         occupiedProperties: "10/10",
         income: 57000,
         cost: 45000,
-        image: "https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png",
+        image: "assets/Blocks/Brouge-Avenue.png",
         storage: 75000,
         properties: [
             {

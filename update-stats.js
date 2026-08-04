@@ -17,14 +17,14 @@ const prefixMap = {
 
 // Mapping from property names to their image URLs
 const imageMap = {
-    'Clinton Ave': 'https://i.postimg.cc/R0yZW6K0/Clinton-Ave.png',
-    'Forum Dr. Apt. Complex B': 'https://i.postimg.cc/p2Xh1KdK/Forum-Drive-2.png',
-    'Niland Avenue': 'https://i.postimg.cc/nzXhK8dZ/Niland-Avenue.png',
-    'Steele Way': 'https://i.postimg.cc/wMvRpLdK/Steele-Way.png',
-    'Nikola Avenue': 'https://i.postimg.cc/KjX2L9dZ/Nikola-Avenue.png',
-    'Eclipse Boulevard': 'https://i.postimg.cc/qqX9M2dK/Eclipse-Boulevard.png',
-    'Forum Dr. Apt. Complex C': 'https://i.postimg.cc/t4X5N3dZ/Forum-Drive-3.png',
-    'Brouge Avenue': 'https://i.postimg.cc/ZqX8P7dK/Brouge-Avenue.png'
+    'Clinton Ave': 'assets/Blocks/Clinton-Ave.png',
+    'Forum Dr. Apt. Complex B': 'assets/Blocks/Forum-Dr-Apt-Complex-B.png',
+    'Niland Avenue': 'assets/Blocks/Niland-Avenue.png',
+    'Steele Way': 'assets/Blocks/Steele-Way.png',
+    'Nikola Avenue': 'assets/Blocks/Nikola-Avenue.png',
+    'Eclipse Boulevard': 'assets/Blocks/Eclipse-Boulevard.png',
+    'Forum Dr. Apt. Complex C': 'assets/Blocks/Forum-Dr-Apt-Complex-B.png', // Using Forum Complex B image as placeholder
+    'Brouge Avenue': 'assets/Blocks/Brouge-Avenue.png'
 };
 
 const storageMap = {
@@ -208,6 +208,7 @@ function updateDataJs(stats) {
             block.income = stat.income;
             block.cost = stat.cost;
             block.storage = stat.storage;
+            block.image = imageMap[block.name] || block.image; // Update image if available in imageMap
             block.properties = stat.properties;
             filteredBlocks.push(block);
         } else {
@@ -235,7 +236,7 @@ function updateDataJs(stats) {
                 occupiedProperties: `${stat.occupied}/${stat.total}`,
                 income: stat.income,
                 cost: stat.cost,
-                image: imageMap[name] || "https://via.placeholder.com/400x300?text=" + encodeURIComponent(name), // Use property-specific image or placeholder
+                image: imageMap[name] || "assets/Blocks/Adhikari-Builders.png", // Use property-specific image or default asset
                 storage: stat.storage,
                 properties: stat.properties
             };
