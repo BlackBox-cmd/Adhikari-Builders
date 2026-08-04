@@ -44,6 +44,38 @@ function parseCurrency(str) {
     return parseInt(str.replace(/[\$,]/g, ''), 10) || 0;
 }
 
+// Proper CSV parser that handles quoted fields
+function parseCSVLine(line) {
+    const cols = [];
+    let current = '';
+    let insideQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        const nextChar = line[i + 1];
+
+        if (char === '"') {
+            if (insideQuotes && nextChar === '"') {
+                // Escaped quote
+                current += '"';
+                i++;
+            } else {
+                // Toggle quote state
+                insideQuotes = !insideQuotes;
+            }
+        } else if (char === ',' && !insideQuotes) {
+            // Field separator
+            cols.push(current.trim());
+            current = '';
+        } else {
+            current += char;
+        }
+    }
+    // Add the last field
+    cols.push(current.trim());
+    return cols;
+}
+
 function processCSV() {
     const csvContent = fs.readFileSync(csvFilePath, 'utf8');
     const lines = csvContent.trim().split('\n');
@@ -53,7 +85,7 @@ function processCSV() {
 
     // Dynamically discover any new prefixes from the CSV and add to prefixMap
     dataLines.forEach(line => {
-        const cols = line.split(',');
+        const cols = parseCSVLine(line);
         if (cols.length < 2) return;
         const address = cols[1].trim();
         if (address) {
@@ -81,7 +113,7 @@ function processCSV() {
     }
 
     dataLines.forEach(line => {
-        const cols = line.split(',');
+        const cols = parseCSVLine(line);
         if (cols.length < 8) return;
 
         const status = cols[0].trim();
