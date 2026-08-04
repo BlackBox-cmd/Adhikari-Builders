@@ -44,7 +44,7 @@ function parseCurrency(str) {
     return parseInt(str.replace(/[\$,]/g, ''), 10) || 0;
 }
 
-// Proper CSV parser that handles quoted fields
+// Simple CSV parser - works with properly formatted CSV files
 function parseCSVLine(line) {
     const cols = [];
     let current = '';
@@ -56,7 +56,7 @@ function parseCSVLine(line) {
 
         if (char === '"') {
             if (insideQuotes && nextChar === '"') {
-                // Escaped quote
+                // Escaped quote (double quote)
                 current += '"';
                 i++;
             } else {
@@ -64,7 +64,7 @@ function parseCSVLine(line) {
                 insideQuotes = !insideQuotes;
             }
         } else if (char === ',' && !insideQuotes) {
-            // Field separator
+            // Field separator (only outside quotes)
             cols.push(current.trim());
             current = '';
         } else {
@@ -73,7 +73,14 @@ function parseCSVLine(line) {
     }
     // Add the last field
     cols.push(current.trim());
-    return cols;
+    
+    // Remove quotes from individual fields if they're quoted
+    return cols.map(col => {
+        if (col.startsWith('"') && col.endsWith('"')) {
+            return col.slice(1, -1);
+        }
+        return col;
+    });
 }
 
 function processCSV() {
