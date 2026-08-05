@@ -18,7 +18,7 @@ Evictable,Forum Drive 2 / Apt17,Janitor Apartment,46,Rotax Kit,839-9450,$3,000,$
 Paid 8/23/2026,Forum Drive 2 / Apt18,Janitor Apartment,573,Muffin Griffin,141-7236,$1,000,$1,500
 Paid 9/6/2026,Forum Drive 2 / Apt19,Janitor Apartment,1557,Sajeed Raihan Samir,566-0027,$1,000,$1,500
 Paid 8/1/2026,Forum Drive 2 / Apt20,Janitor Apartment,405,Khokan Kar,554-6632,$3,000,$1,500
-Empty,Forum Drive 2 / Apt21,Janitor Apartment,N/A,N/A,N/A,$0,$1,500
+Paid 8/12/2026,Forum Drive 2 / Apt21,Janitor Apartment,672,Xenom Cortez,120-7012,$1,000,$1,500
 Empty,Niland Avenue 1,Trevor's Trailer,N/A,N/A,N/A,$0,$1,000
 Empty,Niland Avenue 2,Trevor's Trailer,N/A,N/A,N/A,$0,$1,000
 Paid 7/30/2026,Niland Avenue 3,Trevor's Trailer,2379,Ethan Arfex,368-2197,$3,000,$1,000
@@ -31,13 +31,13 @@ Paid 8/1/2026,Steele Way 1,Michael's Mansion,2230,Adeline Envrentó,823-7514,$10
 Paid 8/6/2026,Steele Way 2,Michael's Mansion,356,Freak Carlos,262-3261,$800,$8,000
 Paid 10/29/2026,Steele Way 3,Michael's Mansion,471,Munshi Jr,559-3942,$8,000,$8,000
 Overdue,Steele Way 4,Michael's Mansion,2098,Shidharto Cruz,778-8648,$12,000,$8,000
-Evictable,Steele Way 5,Michael's Mansion,84,Kane Ramirez,774-5716,$8,000,$8,000
+Empty,Steele Way 5,Michael's Mansion,N/A,N/A,N/A,$0,$8,000
 Paid 7/30/2026,Steele Way 6,Michael's Mansion,1305,Levi Ackerman,908-1069,$9,000,$8,000
-Evictable,Nikola Avenue 1,Michael's Mansion,1246,Judgement Carter,666-6767,$11,000,$8,000
+Empty,Nikola Avenue 1,Michael's Mansion,N/A,N/A,N/A,$0,$8,000
 Paid 8/20/2026,Nikola Avenue 2,Trevor's Beach House,733,Nexus Andree,863-6423,$7,000,$5,000
 Paid 7/29/2026,Nikola Avenue 3,Trevor's Beach House,164,Drek Dee,612-4036,$5,000,$5,000
 Paid 8/31/2026,Nikola Avenue 4,Mid-End Apartment (House),548,Mir Jafor Ali Khan,717-6835,$6,500,$4,500
-Paid 8/1/2026,Nikola Avenue 5,Mid-End Apartment (House),729,Zero Yagami,230-5868,$6,000,$4,500
+Paid 8/8/2026,Nikola Avenue 5,Mid-End Apartment (House),729,Zero Yagami,230-5868,$6,000,$4,500
 Paid 8/21/2026,Nikola Avenue 6,Mid-End Apartment (House),1521,Roy Vahi,989-8827,$6,000,$4,500
 Overdue,Eclipse Boulevard 1,Motel,3,Anthony Spero,730-2745,$1,$500
 Overdue,Eclipse Boulevard 2,Motel,2379,Ethan Arfex,368-2197,$1,000,$500
@@ -57,28 +57,28 @@ Paid 8/8/2026,Brouge Avenue 5,Mid-End Apartment (House),108,Mn Kuddus,823-2132,$
 Paid 8/1/2026,Brouge Avenue 6,Mid-End Apartment (House),402,Gnja Ibrahim,415-3729,$5,700,$4,500
 Overdue,Brouge Avenue 7,Mid-End Apartment (House),259,Dark Santiago,673-9417,$5,700,$4,500
 Overdue,Brouge Avenue 8,Mid-End Apartment (House),770,Ancient Nexy,112-9922,$5,700,$4,500
-Evictable,Brouge Avenue 9,Mid-End Apartment (House),50,Mansoor Dalal,298-6387,$5,700,$4,500
+Empty,Brouge Avenue 9,Mid-End Apartment (House),N/A,N/A,N/A,$0,$4,500
 Overdue,Brouge Avenue 10,Mid-End Apartment (House),2325,Ayan Mallik,114-5090,$5,700,$4,500
-Paid 7/29/2026,Clinton Ave / Apt1,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt2,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Paid 8/5/2026,Clinton Ave / Apt1,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Paid 8/5/2026,Clinton Ave / Apt2,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 9/2/2026,Clinton Ave / Apt3,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt4,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt5,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Overdue,Clinton Ave / Apt4,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Paid 8/5/2026,Clinton Ave / Apt5,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 9/2/2026,Clinton Ave / Apt6,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/19/2026,Clinton Ave / Apt7,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/19/2026,Clinton Ave / Apt8,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/12/2026,Clinton Ave / Apt9,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 9/2/2026,Clinton Ave / Apt10,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt11,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt12,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Overdue,Clinton Ave / Apt11,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Overdue,Clinton Ave / Apt12,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/5/2026,Clinton Ave / Apt13,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt14,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Overdue,Clinton Ave / Apt14,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/26/2026,Clinton Ave / Apt15,Low-End Apartment,119,Sumsul Arefin,165-2196,$2,175,$2,000
 Paid 8/12/2026,Clinton Ave / Apt16,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/12/2026,Clinton Ave / Apt17,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/26/2026,Clinton Ave / Apt18,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt19,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Overdue,Clinton Ave / Apt19,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 9/2/2026,Clinton Ave / Apt20,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 8/19/2026,Clinton Ave / Apt21,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
 Paid 9/2/2026,Clinton Ave / Apt22,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
-Paid 7/29/2026,Clinton Ave / Apt23,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
+Paid 8/12/2026,Clinton Ave / Apt23,Janitor Apartment,119,Sumsul Arefin,165-2196,$2,175,$1,500
