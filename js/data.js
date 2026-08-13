@@ -545,8 +545,8 @@ const propertyBlocks = [
     {
         id: 66,
         name: "Steele Way",
-        occupiedProperties: "5/6",
-        income: 39800,
+        occupiedProperties: "6/6",
+        income: 50300,
         cost: 48000,
         image: "assets/Blocks/Steele-Way.png",
         storage: 90000,
@@ -592,12 +592,12 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Empty",
+                status: "Paid 8/13/2026",
                 address: "Steele Way 5",
                 interior: "Michael's Mansion",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Ethan Arfex",
+                phone: "368-2197",
+                income: 10500,
                 cost: 8000,
                 storage: 15000
             },
