@@ -9,7 +9,7 @@ const propertyBlocks = [
         storage: 69750,
         properties: [
             {
-                status: "Paid 8/19/2026",
+                status: "Paid 8/26/2026",
                 address: "Clinton Ave / Apt1",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -119,7 +119,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Paid 9/9/2026",
                 address: "Clinton Ave / Apt12",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -243,8 +243,8 @@ const propertyBlocks = [
     {
         id: 2,
         name: "Forum Dr. Apt. Complex B",
-        occupiedProperties: "19/20",
-        income: 13681,
+        occupiedProperties: "20/20",
+        income: 13682,
         cost: 30000,
         image: "assets/Blocks/Forum-Dr-Apt-Complex-B.png",
         storage: 60000,
@@ -260,12 +260,12 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Empty",
+                status: "Paid 8/25/2026",
                 address: "Forum Drive 2 / Apt2",
                 interior: "Janitor Apartment",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Akkhar Adhikari",
+                phone: "488-1724",
+                income: 1,
                 cost: 1500,
                 storage: 3000
             },
@@ -300,7 +300,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/25/2026",
+                status: "Paid 9/29/2026",
                 address: "Forum Drive 2 / Apt6",
                 interior: "Janitor Apartment",
                 renterName: "Freak Carlos",
@@ -310,7 +310,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 11/12/2026",
+                status: "Paid 12/3/2026",
                 address: "Forum Drive 2 / Apt7",
                 interior: "Janitor Apartment",
                 renterName: "Alphonse Capone",
@@ -511,7 +511,7 @@ const propertyBlocks = [
                 storage: 2250
             },
             {
-                status: "Evictable",
+                status: "Paid 12/5/2026",
                 address: "Niland Avenue 6",
                 interior: "Trevor's Trailer",
                 renterName: "Akkhar Adhikari",
@@ -531,7 +531,7 @@ const propertyBlocks = [
                 storage: 2250
             },
             {
-                status: "Paid 8/24/2026",
+                status: "Paid 9/7/2026",
                 address: "Niland Avenue 8",
                 interior: "Trevor's Trailer",
                 renterName: "Freak Carlos",
@@ -545,8 +545,8 @@ const propertyBlocks = [
     {
         id: 66,
         name: "Steele Way",
-        occupiedProperties: "5/6",
-        income: 38300,
+        occupiedProperties: "6/6",
+        income: 53300,
         cost: 48000,
         image: "assets/Blocks/Steele-Way.png",
         storage: 90000,
@@ -562,7 +562,7 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Paid 8/20/2026",
+                status: "Paid 9/24/2026",
                 address: "Steele Way 2",
                 interior: "Michael's Mansion",
                 renterName: "Freak Carlos",
@@ -582,12 +582,12 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Empty",
+                status: "Paid 8/24/2026",
                 address: "Steele Way 4",
                 interior: "Michael's Mansion",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Thiago De Kraven",
+                phone: "443-6076",
+                income: 15000,
                 cost: 8000,
                 storage: 15000
             },
@@ -623,7 +623,7 @@ const propertyBlocks = [
         storage: 55500,
         properties: [
             {
-                status: "Paid 8/19/2026",
+                status: "Paid 9/23/2026",
                 address: "Nikola Avenue 1",
                 interior: "Michael's Mansion",
                 renterName: "Freak Carlos",
