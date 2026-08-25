@@ -244,7 +244,7 @@ const propertyBlocks = [
         id: 2,
         name: "Forum Dr. Apt. Complex B",
         occupiedProperties: "20/20",
-        income: 13682,
+        income: 10674,
         cost: 30000,
         image: "assets/Blocks/Forum-Dr-Apt-Complex-B.png",
         storage: 60000,
@@ -275,7 +275,7 @@ const propertyBlocks = [
                 interior: "Janitor Apartment",
                 renterName: "Sajeed Raihan Samir",
                 phone: "566-0027",
-                income: 10,
+                income: 1,
                 cost: 1500,
                 storage: 3000
             },
@@ -430,12 +430,12 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Evictable",
+                status: "Paid 12/8/2026",
                 address: "Forum Drive 2 / Apt20",
                 interior: "Janitor Apartment",
-                renterName: "Khokan Kar",
-                phone: "554-6632",
-                income: 3000,
+                renterName: "Sajeed Raihan Samir",
+                phone: "566-0027",
+                income: 1,
                 cost: 1500,
                 storage: 3000
             },
@@ -454,19 +454,19 @@ const propertyBlocks = [
     {
         id: 163,
         name: "Niland Avenue",
-        occupiedProperties: "5/8",
-        income: 7252,
+        occupiedProperties: "3/8",
+        income: 2252,
         cost: 8000,
         image: "assets/Blocks/Niland-Avenue.png",
         storage: 18000,
         properties: [
             {
-                status: "Evictable",
+                status: "Empty",
                 address: "Niland Avenue 1",
                 interior: "Trevor's Trailer",
-                renterName: "Prachurjo Chowdhury",
-                phone: "101-8282",
-                income: 2000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1000,
                 storage: 2250
             },
@@ -481,12 +481,12 @@ const propertyBlocks = [
                 storage: 2250
             },
             {
-                status: "Evictable",
+                status: "Empty",
                 address: "Niland Avenue 3",
                 interior: "Trevor's Trailer",
-                renterName: "Ethan Arfex",
-                phone: "368-2197",
-                income: 3000,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 1000,
                 storage: 2250
             },
@@ -545,8 +545,8 @@ const propertyBlocks = [
     {
         id: 66,
         name: "Steele Way",
-        occupiedProperties: "6/6",
-        income: 53300,
+        occupiedProperties: "5/6",
+        income: 42800,
         cost: 48000,
         image: "assets/Blocks/Steele-Way.png",
         storage: 90000,
@@ -592,12 +592,12 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Paid 8/20/2026",
+                status: "Empty",
                 address: "Steele Way 5",
                 interior: "Michael's Mansion",
-                renterName: "Ethan Arfex",
-                phone: "368-2197",
-                income: 10500,
+                renterName: "N/A",
+                phone: "N/A",
+                income: 0,
                 cost: 8000,
                 storage: 15000
             },
@@ -798,8 +798,8 @@ const propertyBlocks = [
     {
         id: 16,
         name: "Brouge Avenue",
-        occupiedProperties: "5/10",
-        income: 28500,
+        occupiedProperties: "9/10",
+        income: 54500,
         cost: 45000,
         image: "assets/Blocks/Brouge-Avenue.png",
         storage: 75000,
@@ -825,7 +825,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Overdue",
+                status: "Paid 8/22/2026",
                 address: "Brouge Avenue 3",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Tarek Tia",
@@ -855,37 +855,37 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Empty",
+                status: "Paid 8/25/2026",
                 address: "Brouge Avenue 6",
                 interior: "Mid-End Apartment (House)",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Thiago De Kraven",
+                phone: "443-6076",
+                income: 6500,
                 cost: 4500,
                 storage: 7500
             },
             {
-                status: "Empty",
+                status: "Paid 8/25/2026",
                 address: "Brouge Avenue 7",
                 interior: "Mid-End Apartment (House)",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Alpha Tanim",
+                phone: "375-8688",
+                income: 6500,
                 cost: 4500,
                 storage: 7500
             },
             {
-                status: "Empty",
+                status: "Paid 8/25/2026",
                 address: "Brouge Avenue 8",
                 interior: "Mid-End Apartment (House)",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Saint Ash",
+                phone: "174-3507",
+                income: 6500,
                 cost: 4500,
                 storage: 7500
             },
             {
-                status: "Overdue",
+                status: "Paid 8/20/2026",
                 address: "Brouge Avenue 9",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Mac Draven",
@@ -895,12 +895,12 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Empty",
+                status: "Paid 8/25/2026",
                 address: "Brouge Avenue 10",
                 interior: "Mid-End Apartment (House)",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Levi Ackerman",
+                phone: "908-1069",
+                income: 6500,
                 cost: 4500,
                 storage: 7500
             }
