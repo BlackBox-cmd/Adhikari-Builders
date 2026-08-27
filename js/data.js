@@ -19,7 +19,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/19/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt2",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -49,7 +49,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/19/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt5",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -79,7 +79,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/19/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt8",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -109,7 +109,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/19/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt11",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -129,7 +129,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Evictable",
                 address: "Clinton Ave / Apt13",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -139,7 +139,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/19/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt14",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -189,7 +189,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/19/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt19",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -209,7 +209,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 8/19/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt21",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -617,7 +617,7 @@ const propertyBlocks = [
         id: 37,
         name: "Nikola Avenue",
         occupiedProperties: "6/6",
-        income: 31500,
+        income: 32000,
         cost: 31500,
         image: "assets/Blocks/Nikola-Avenue.png",
         storage: 55500,
@@ -663,12 +663,12 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 8/29/2026",
+                status: "Paid 8/26/2026",
                 address: "Nikola Avenue 5",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Zero Yagami",
                 phone: "230-5868",
-                income: 6000,
+                income: 6500,
                 cost: 4500,
                 storage: 7500
             },
@@ -799,28 +799,28 @@ const propertyBlocks = [
         id: 16,
         name: "Brouge Avenue",
         occupiedProperties: "9/10",
-        income: 54500,
+        income: 55300,
         cost: 45000,
         image: "assets/Blocks/Brouge-Avenue.png",
         storage: 75000,
         properties: [
             {
-                status: "Overdue",
-                address: "Brouge Avenue 1",
-                interior: "Mid-End Apartment (House)",
-                renterName: "Kai Sledge",
-                phone: "852-7507",
-                income: 5700,
-                cost: 4500,
-                storage: 7500
-            },
-            {
                 status: "Empty",
-                address: "Brouge Avenue 2",
+                address: "Brouge Avenue 1",
                 interior: "Mid-End Apartment (House)",
                 renterName: "N/A",
                 phone: "N/A",
                 income: 0,
+                cost: 4500,
+                storage: 7500
+            },
+            {
+                status: "Paid 8/25/2026",
+                address: "Brouge Avenue 2",
+                interior: "Mid-End Apartment (House)",
+                renterName: "Abbas Ali",
+                phone: "389-3951",
+                income: 6500,
                 cost: 4500,
                 storage: 7500
             },
