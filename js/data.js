@@ -9,7 +9,7 @@ const propertyBlocks = [
         storage: 69750,
         properties: [
             {
-                status: "Paid 9/2/2026",
+                status: "Paid 9/9/2026",
                 address: "Clinton Ave / Apt1",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -189,7 +189,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Paid 9/2/2026",
                 address: "Clinton Ave / Apt19",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -521,7 +521,7 @@ const propertyBlocks = [
                 storage: 2250
             },
             {
-                status: "Paid 8/30/2026",
+                status: "Overdue",
                 address: "Niland Avenue 7",
                 interior: "Trevor's Trailer",
                 renterName: "Sajeed Raihan Samir",
@@ -545,8 +545,8 @@ const propertyBlocks = [
     {
         id: 66,
         name: "Steele Way",
-        occupiedProperties: "4/6",
-        income: 27800,
+        occupiedProperties: "6/6",
+        income: 51800,
         cost: 48000,
         image: "assets/Blocks/Steele-Way.png",
         storage: 90000,
@@ -582,22 +582,22 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Empty",
+                status: "Paid 9/6/2026",
                 address: "Steele Way 4",
                 interior: "Michael's Mansion",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Carolina Reaper",
+                phone: "981-0930",
+                income: 12000,
                 cost: 8000,
                 storage: 15000
             },
             {
-                status: "Empty",
+                status: "Paid 9/6/2026",
                 address: "Steele Way 5",
                 interior: "Michael's Mansion",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Carolina Reaper",
+                phone: "981-0930",
+                income: 12000,
                 cost: 8000,
                 storage: 15000
             },
