@@ -19,7 +19,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt2",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -29,7 +29,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt3",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -39,7 +39,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt4",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -59,7 +59,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Paid 10/7/2026",
                 address: "Clinton Ave / Apt6",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -69,7 +69,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt7",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -89,7 +89,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt9",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -119,7 +119,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/9/2026",
+                status: "Paid 9/16/2026",
                 address: "Clinton Ave / Apt12",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -129,7 +129,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Paid 9/9/2026",
                 address: "Clinton Ave / Apt13",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -139,7 +139,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Evictable",
                 address: "Clinton Ave / Apt14",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -159,7 +159,7 @@ const propertyBlocks = [
                 storage: 3750
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt16",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -169,7 +169,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt17",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -189,7 +189,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Clinton Ave / Apt19",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -199,7 +199,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Paid 9/16/2026",
                 address: "Clinton Ave / Apt20",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -219,7 +219,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/9/2026",
+                status: "Paid 9/16/2026",
                 address: "Clinton Ave / Apt22",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -229,7 +229,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Paid 9/16/2026",
                 address: "Clinton Ave / Apt23",
                 interior: "Janitor Apartment",
                 renterName: "Sumsul Arefin",
@@ -260,7 +260,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Paid 9/29/2026",
                 address: "Forum Drive 2 / Apt2",
                 interior: "Janitor Apartment",
                 renterName: "Akkhar Adhikari",
@@ -440,7 +440,7 @@ const propertyBlocks = [
                 storage: 3000
             },
             {
-                status: "Overdue",
+                status: "Evictable",
                 address: "Forum Drive 2 / Apt21",
                 interior: "Janitor Apartment",
                 renterName: "Xenom Cortez",
@@ -602,7 +602,7 @@ const propertyBlocks = [
                 storage: 15000
             },
             {
-                status: "Overdue",
+                status: "Paid 9/3/2026",
                 address: "Steele Way 6",
                 interior: "Michael's Mansion",
                 renterName: "Levi Ackerman",
@@ -643,7 +643,7 @@ const propertyBlocks = [
                 storage: 9000
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Nikola Avenue 3",
                 interior: "Trevor's Beach House",
                 renterName: "Drek Dee",
@@ -663,7 +663,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Overdue",
+                status: "Evictable",
                 address: "Nikola Avenue 5",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Zero Yagami",
@@ -685,137 +685,26 @@ const propertyBlocks = [
         ]
     },
     {
-        id: 77,
-        name: "Eclipse Boulevard",
-        occupiedProperties: "0/10",
-        income: 0,
-        cost: 14000,
-        image: "assets/Blocks/Eclipse-Boulevard.png",
-        storage: 30000,
-        properties: [
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 1",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 2",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 3 / Apt1",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 3 / Apt2",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 3 / Apt3",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 3 / Apt4",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 4",
-                interior: "Trevor's Beach House",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 5000,
-                storage: 9000
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 5",
-                interior: "Trevor's Beach House",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 5000,
-                storage: 9000
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 6",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            },
-            {
-                status: "Empty",
-                address: "Eclipse Boulevard 7",
-                interior: "Motel",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
-                cost: 500,
-                storage: 1500
-            }
-        ]
-    },
-    {
         id: 16,
         name: "Brouge Avenue",
-        occupiedProperties: "8/10",
-        income: 51200,
+        occupiedProperties: "9/10",
+        income: 57200,
         cost: 45000,
         image: "assets/Blocks/Brouge-Avenue.png",
         storage: 75000,
         properties: [
             {
-                status: "Empty",
+                status: "Paid 9/8/2026",
                 address: "Brouge Avenue 1",
                 interior: "Mid-End Apartment (House)",
-                renterName: "N/A",
-                phone: "N/A",
-                income: 0,
+                renterName: "Kala Mofiz",
+                phone: "582-3683",
+                income: 6000,
                 cost: 4500,
                 storage: 7500
             },
             {
-                status: "Paid 9/1/2026",
+                status: "Paid 9/8/2026",
                 address: "Brouge Avenue 2",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Abbas Ali",
@@ -825,7 +714,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 9/2/2026",
+                status: "Overdue",
                 address: "Brouge Avenue 3",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Rafael Envrentó",
@@ -865,7 +754,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 9/1/2026",
+                status: "Overdue",
                 address: "Brouge Avenue 7",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Alpha Tanim",
@@ -875,7 +764,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Paid 9/1/2026",
+                status: "Overdue",
                 address: "Brouge Avenue 8",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Saint Ash",
@@ -895,7 +784,7 @@ const propertyBlocks = [
                 storage: 7500
             },
             {
-                status: "Overdue",
+                status: "Paid 9/8/2026",
                 address: "Brouge Avenue 10",
                 interior: "Mid-End Apartment (House)",
                 renterName: "Levi Ackerman",
