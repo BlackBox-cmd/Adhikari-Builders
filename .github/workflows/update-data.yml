@@ -9,7 +9,7 @@ on:
 
 jobs:
   update-data-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     
     # We need permission to push the updated CSV back to the repo
     permissions:
@@ -60,7 +60,7 @@ jobs:
 
       - name: Commit and Push changes
         id: auto-commit
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Auto-update: Sync renters data from Google Sheets"
           file_pattern: "renters.csv js/data.js"
