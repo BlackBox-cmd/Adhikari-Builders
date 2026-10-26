@@ -9,7 +9,7 @@ on:
 
 jobs:
   update-data-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     
     # We need permission to push the updated CSV back to the repo
     permissions:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Fetch CSV from Google Sheets
         run: |
-          curl -L "https://docs.google.com/spreadsheets/d/1cRmN8s2aYvgFYztTH2QC4zm9IxjtAl9FgABQMD0R1Kw/export?format=csv&gid=0" -o renters_raw.csv
+          curl -L "https://docs.google.com/spreadsheets/d/1cRmN8s2aYvgFYztTH2QC4zm9IxjtAl9FgABQMD0R1Kw/export?format=csv&sheet=Sheet1" -o renters_raw.csv
           echo "✓ Downloaded renters_raw.csv"
           ls -lh renters_raw.csv
           # Clean up the malformed CSV export from Google Sheets
@@ -60,7 +60,7 @@ jobs:
 
       - name: Commit and Push changes
         id: auto-commit
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Auto-update: Sync renters data from Google Sheets"
           file_pattern: "renters.csv js/data.js"
