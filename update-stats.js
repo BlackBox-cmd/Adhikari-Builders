@@ -429,7 +429,7 @@ function updateDataJs(stats) {
                 occupiedProperties: `${stat.occupied}/${stat.total}`,
                 income: stat.income,
                 cost: stat.cost,
-                image: imageMap[name] || "assets/Blocks/Adhikari-Builders.png", // Use property-specific image or default asset
+                image: imageMap[name] || "assets/Blocks/GENESIS-REAL-ESTATE.png", // Use property-specific image or default asset
                 storage: stat.storage,
                 properties: stat.properties
             };

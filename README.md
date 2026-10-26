@@ -1,14 +1,14 @@
-# Adhikari Builders - Los Santos Rental Division (GTA V RP Website)
+# GENESIS REAL ESTATE - Los Santos Rental Division (GTA V RP Website)
 
-![Adhikari Builders Logo Placeholder](https://i.postimg.cc/fyP0xGFk/Adhikari-Builders.png )
+![GENESIS REAL ESTATE Logo Placeholder](https://i.postimg.cc/fyP0xGFk/GENESIS-REAL-ESTATE.png )
 
-Welcome to the official website for Adhikari Builders, Los Santos Rental Division. This is an in-character Grand Theft Auto V Roleplay (GTA V RP) business focused on providing secure, legal, and RP-friendly housing within the city of Los Santos.
+Welcome to the official website for GENESIS REAL ESTATE, Los Santos Rental Division. This is an in-character Grand Theft Auto V Roleplay (GTA V RP) business focused on providing secure, legal, and RP-friendly housing within the city of Los Santos.
 
 Our website is designed to emulate the immersive user interface experience of FiveM NUI or in-game laptop interfaces, ensuring a professional and integrated feel for all players.
 
 ## Developer Note
 
-This repository contains the source code for the Adhikari Builders website. Please note that I am the developer of this website and not the owner or operator of the "Adhikari Builders" business. "Adhikari Builders" is a fictional, in-character entity within the Grand Theft Auto V Roleplay (GTA V RP) universe. The website serves as a demonstration and functional portal for this RP business.
+This repository contains the source code for the GENESIS REAL ESTATE website. Please note that I am the developer of this website and not the owner or operator of the "GENESIS REAL ESTATE" business. "GENESIS REAL ESTATE" is a fictional, in-character entity within the Grand Theft Auto V Roleplay (GTA V RP) universe. The website serves as a demonstration and functional portal for this RP business.
 
 ## Features
 
@@ -23,7 +23,7 @@ This repository contains the source code for the Adhikari Builders website. Plea
 
 ## Getting Started
 
-To view the Adhikari Builders website locally:
+To view the GENESIS REAL ESTATE website locally:
 
 1.  **Clone the repository** (if applicable, otherwise download the files).
 2.  Navigate to the project directory.
@@ -77,4 +77,4 @@ This project uses Cloudflare Pages via Wrangler for deployment, with automated b
 For in-game inquiries, please visit our office in Los Santos. For Discord support and community engagement, please use the "Join Discord" button on our website.
 
 ---
-© Adhikari Builders — Mr_Freak_cmd
+© GENESIS REAL ESTATE — Mr_Freak_cmd

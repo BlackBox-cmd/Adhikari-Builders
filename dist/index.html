@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENESIS REAL ESTATE - Los Santos Rental Division</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="company-logo">GENESIS REAL ESTATE</a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#blocks" class="nav-link">Properties</a>
+                <a href="#rules" class="nav-link">Rules</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-controls">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <a href="https://discord.gg/ar8zyW2GDN" target="_blank" rel="noopener" class="discord-button">Join Discord</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>GENESIS REAL ESTATE</h1>
+                <p>Secure • Legal • Budget Friendly Housing</p>
+                <a href="#blocks" class="cta-button">View Properties</a>
+            </div>
+        </section>
+
+        <section id="blocks" class="content-section">
+            <div class="container">
+                <h2>Property Portfolio</h2>
+                <div id="blocks-grid" class="grid">
+                    <!-- Property blocks will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="rules" class="content-section alt-bg">
+            <div class="container">
+                <h2>Rules & Information</h2>
+                <div class="rules-panel">
+                    <ul>
+                        <li>Rent must be paid before the due date.</li>
+                        <li>No illegal activities inside properties.</li>
+                        <li>No sub-letting without approval.</li>
+                        <li>Property damage may result in fines or eviction.</li>
+                        <li>2 missed payments may lead to eviction.</li>
+                        <li>RP behavior is mandatory.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="content-section">
+            <div class="container">
+                <h2>Professional real estate experts at your service</h2>
+                <div id="team-grid" class="grid">
+                    <!-- Team members will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section alt-bg">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <p>For all inquiries, please reach out to us through our official channels.</p>
+                    <p><strong>In-Game Office:</strong> Visit our main office in Rockford Hills during business hours.</p>
+                    <p><strong>Discord:</strong> For support and announcements, please join our Discord server.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h3 class="footer-logo">GENESIS REAL ESTATE</h3>
+                <p>© 2026 All Rights Reserved. GTA V Roleplay.</p>
+            </div>
+            <div class="footer-right">
+                <p>Designed & Developed by <a href="https://portfolio.freakcloud.tk/" target="_blank" class="dev-link">Mr_Freak_cmd</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Property Details Modal -->
+    <div id="property-modal" class="modal-overlay">
+        <div class="modal-panel">
+            <button class="modal-close" id="close-modal-btn">&times;</button>
+            <h2 id="modal-title">Property Details</h2>
+            <div class="table-container" style="overflow-x: auto;">
+                <table class="properties-table">
+                    <thead>
+                        <tr>
+                            <th>Address</th>
+                            <th>Status</th>
+                            <th>Interior</th>
+                            <th>Storage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="properties-tbody">
+                        <!-- Rows injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
