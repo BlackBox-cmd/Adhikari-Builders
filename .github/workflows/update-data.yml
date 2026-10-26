@@ -32,7 +32,7 @@ jobs:
 
       - name: Fetch CSV from Google Sheets
         run: |
-          curl -L "https://docs.google.com/spreadsheets/d/1cRmN8s2aYvgFYztTH2QC4zm9IxjtAl9FgABQMD0R1Kw/export?format=csv&gid=0" -o renters_raw.csv
+          curl -L "https://docs.google.com/spreadsheets/d/1cRmN8s2aYvgFYztTH2QC4zm9IxjtAl9FgABQMD0R1Kw/edit?gid=0#gid=0" -o renters_raw.csv
           echo "✓ Downloaded renters_raw.csv"
           ls -lh renters_raw.csv
           # Clean up the malformed CSV export from Google Sheets
