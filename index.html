@@ -130,12 +130,13 @@
         <div class="modal-panel">
             <button class="modal-close" id="close-modal-btn">&times;</button>
             <h2 id="modal-title">Property Details</h2>
-            <div class="table-container" style="overflow-x: auto;">
+            <div class="table-container" id="properties-table-container" style="overflow-x: auto;">
                 <table class="properties-table">
                     <thead>
                         <tr>
                             <th>Address</th>
                             <th>Status</th>
+                            <th>Booking</th>
                             <th>Interior</th>
                             <th>Storage</th>
                         </tr>
@@ -144,6 +145,51 @@
                         <!-- Rows injected via JS -->
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Booking Form (inline replacement) -->
+            <div id="booking-form-container" style="display: none;">
+                <button class="back-btn" id="back-to-properties-btn">&larr; Back to Properties</button>
+                <h3>Book Property</h3>
+                <form id="booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="booking-name">Name <span class="required">*</span></label>
+                        <input type="text" id="booking-name" name="name" maxlength="50" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-cid">CID (Character ID) <span class="required">*</span></label>
+                        <input type="text" id="booking-cid" name="cid" pattern="\d{1,5}" inputmode="numeric" required aria-required="true" placeholder="e.g., 1234" maxlength="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="booking-phone" name="phone" pattern="\d{3}-\d{4}" required aria-required="true" placeholder="123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-address">Property Address</label>
+                        <input type="text" id="booking-address" name="address" readonly aria-readonly="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-date">Requested Move-in Date <span class="required">*</span></label>
+                        <input type="date" id="booking-date" name="date" required aria-required="true">
+                    </div>
+
+                    <!-- Honeypot field for spam protection -->
+                    <div class="hp-field" aria-hidden="true" tabindex="-1">
+                        <label for="website">Website (leave blank)</label>
+                        <input type="text" id="website" name="website" autocomplete="off" tabindex="-1">
+                    </div>
+
+                    <div id="booking-message" class="booking-message" role="alert" aria-live="polite"></div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit" id="booking-submit-btn">Order</button>
+                        <button type="button" class="btn-cancel" id="booking-cancel-btn">Cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -7,9 +7,11 @@ node_modules/
 .DS_Store
 .env
 .env.local
+.dev.vars
 
 # IDE-specific files
 .vscode/
 .idea/
 
-
+# Wrangler
+wrangler.toml

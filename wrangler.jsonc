@@ -1,10 +1,21 @@
 {
-  "name": "gr",
+  "name": "luxury-real-estate",
   "compatibility_date": "2026-01-15",
+  "main": "src/worker.js",
   "build": {
     "command": "npm run build"
   },
   "assets": {
     "directory": "dist"
-  }
+  },
+  // KV namespace for rate limiting (optional - remove if causing issues)
+  // To enable: create namespace with `npx wrangler kv:namespace create "RATE_LIMIT" --preview`
+  // Then add the ID here
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "RATE_LIMIT",
+  //     "id": "<your-kv-namespace-id>",
+  //     "preview_id": "<your-preview-kv-namespace-id>"
+  //   }
+  // ]
 }
