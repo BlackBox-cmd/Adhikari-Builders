@@ -1,7 +1,7 @@
 {
   "name": "genesis-real-estate",
   "version": "2.1.0",
-  "description": "GENESIS REAL ESTATE - Los Santos Rental Division Static Site",
+  "description": "LUXURY REAL ESTATE - Los Santos Rental Division Static Site",
   "scripts": {
     "build": "node build.js",
     "deploy": "npm run build && npx wrangler deploy"

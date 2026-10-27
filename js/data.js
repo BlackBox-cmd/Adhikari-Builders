@@ -165,33 +165,15 @@ const propertyBlocks = [
 
 const teamMembers = [
     {
-        name: "Akkhar Adhikari",
-        role: "CEO / Founder",
-        phone: "488-1724",
-        image: "assets/Akkhar.webp" 
-    },
-    {
         name: "Freak Carlos",
-        role: "COO / CTO",
+        role: "CEO / Founder",
         phone: "262-3261",
-        image: "assets/Freak-Carlos.webp"
-    },
-    {
-        name: "Anthony Spero",
-        role: "Manager",
-        phone: "730-2745",
-        image: "assets/Freak-Carlos.webp"
-    },
-    {
-        name: "Xenom Cortez",
-        role: "Realtor",
-        phone: "120-7012",
-        image: "assets/Xenom.png"
+        image: "assets/Team/Freak-Carlos.webp"
     },
     {
         name: "Munshi Jr",
         role: "Realtor",
         phone: "559-3942",
-        image: "assets/Munshi-Jr.png"
+        image: "assets/Team/Munshi-Jr.png"
     }
 ];

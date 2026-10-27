@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Cross-platform build script for GENESIS REAL ESTATE
+// Cross-platform build script for LUXURY REAL ESTATE
 const distDir = path.join(__dirname, 'dist');
 
 // Remove dist directory if it exists

@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                showBookingSuccess('✓ Booking request sent! Our team will review your request soon.');
+                showBookingSuccess('✓ Booking request sent! One of our agents will contact you shortly. For a prompt response, join our Discord Server.');
                 bookingForm.reset();
 
                 // Close modal after 2 seconds

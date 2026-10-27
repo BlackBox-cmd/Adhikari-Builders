@@ -1,7 +1,11 @@
 # Node.js dependencies
 node_modules/
+
 # Logs
 *.log
+
+#local Builds
+dist/
 
 # Runtime data
 .DS_Store

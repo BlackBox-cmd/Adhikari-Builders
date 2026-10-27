@@ -2,13 +2,13 @@
 
 ![LUXURY REAL ESTATE Logo Placeholder](https://i.postimg.cc/pd1xfFCM/Luxury-Real-Estate-Logo.jpg )
 
-Welcome to the official website for GENESIS REAL ESTATE, Los Santos Rental Division. This is an in-character Grand Theft Auto V Roleplay (GTA V RP) business focused on providing secure, legal, and RP-friendly housing within the city of Los Santos.
+Welcome to the official website for LUXURY REAL ESTATE, Los Santos Rental Division. This is an in-character Grand Theft Auto V Roleplay (GTA V RP) business focused on providing secure, legal, and RP-friendly housing within the city of Los Santos.
 
 Our website is designed to emulate the immersive user interface experience of FiveM NUI or in-game laptop interfaces, ensuring a professional and integrated feel for all players.
 
 ## Developer Note
 
-This repository contains the source code for the GENESIS REAL ESTATE website. Please note that I am the developer of this website and not the owner or operator of the "GENESIS REAL ESTATE" business. "GENESIS REAL ESTATE" is a fictional, in-character entity within the Grand Theft Auto V Roleplay (GTA V RP) universe. The website serves as a demonstration and functional portal for this RP business.
+This repository contains the source code for the LUXURY REAL ESTATE website. Please note that I am the developer of this website and not the owner or operator of the "LUXURY REAL ESTATE" business. "LUXURY REAL ESTATE" is a fictional, in-character entity within the Grand Theft Auto V Roleplay (GTA V RP) universe. The website serves as a demonstration and functional portal for this RP business.
 
 ## Features
 
@@ -24,7 +24,7 @@ This repository contains the source code for the GENESIS REAL ESTATE website. Pl
 
 ## Getting Started
 
-To view the GENESIS REAL ESTATE website locally:
+To view the LUXURY REAL ESTATE website locally:
 
 1.  **Clone the repository** (if applicable, otherwise download the files).
 2.  Navigate to the project directory.
@@ -119,21 +119,6 @@ The booking system allows in-game players to request property rentals through th
    ```bash
    npm run deploy
    ```
-
-### Testing Checklist
-
-Test the booking system thoroughly before going live:
-
-- [ ] **Valid booking**: Fill all fields correctly → Success message appears
-- [ ] **Empty fields**: Submit without required fields → Validation errors shown
-- [ ] **Invalid CID**: Enter letters in CID field → Error message
-- [ ] **Invalid phone**: Use wrong format → Error message (must be 123-4567)
-- [ ] **Past date**: Select yesterday's date → Error message
-- [ ] **Rate limiting**: Submit 6 bookings quickly → 6th should be blocked (429 error)
-- [ ] **Discord**: Verify booking appears in Discord with correct formatting
-- [ ] **Mobile**: Test form on mobile device (responsive layout)
-- [ ] **Accessibility**: Tab through form, press Escape to close
-- [ ] **Theme**: Test in both dark and light modes
 
 ### Updating Property Addresses
 
