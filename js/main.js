@@ -6,6 +6,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const themeToggle = document.getElementById('checkbox');
+    const navbar = document.querySelector('.navbar');
+    const goldParticlesContainer = document.getElementById('gold-particles');
+
+    // --- GOLD PARTICLE EFFECT ---
+    const createGoldParticle = () => {
+        const particle = document.createElement('div');
+        particle.className = 'gold-particle';
+
+        const size = Math.random() * 4 + 2; // 2-6px
+        const duration = Math.random() * 4 + 6; // 6-10s
+        const delay = Math.random() * 2; // 0-2s
+        const left = Math.random() * 100;
+
+        particle.style.cssText = `
+            left: ${left}%;
+            width: ${size}px;
+            height: ${size}px;
+            animation-duration: ${duration}s;
+            animation-delay: ${delay}s;
+        `;
+
+        goldParticlesContainer.appendChild(particle);
+
+        setTimeout(() => particle.remove(), (duration + delay) * 1000);
+    };
+
+    // Create particles periodically
+    if (goldParticlesContainer) {
+        setInterval(createGoldParticle, 800);
+        // Create initial batch
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => createGoldParticle(), i * 200);
+        }
+    }
+
+    // --- NAVBAR SCROLL EFFECT ---
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
     // --- THEME SWITCHER ---
     const currentTheme = localStorage.getItem('theme');

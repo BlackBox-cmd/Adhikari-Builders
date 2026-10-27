@@ -1,27 +1,35 @@
 :root {
-    --background-color: #121212;
-    --panel-color: #1A1A1A;
-    --border-color: #2E2E2E;
-    --text-primary: #FFFFFF;
-    --text-secondary: #B3B3B3;
-    --accent-color: #1dac00; /* Gold */
-    --accent-hover: #B89B00; /* Darker Gold */
-    --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'Montserrat', sans-serif;
-    --shadow-color: rgba(0, 0, 0, 0.5);
-    --available-color: #00ff08;
-    --limited-color: #fbff07;
-    --full-color: #ff1100;
+    /* Luxury Real Estate Brand Colors */
+    --background-color: #0f1115;
+    --panel-color: #1a1d23;
+    --border-color: #2a2f38;
+    --text-primary: #f2ede3;
+    --text-secondary: #9a9a9a;
+    --accent-color: #d4af6a; /* Brushed Gold */
+    --accent-highlight: #e8cf8f; /* Lighter Gold */
+    --accent-dark: #a8873f; /* Darker Gold */
+    --font-primary: 'Manrope', sans-serif;
+    --font-secondary: 'Cinzel', serif;
+    --font-tertiary: 'Cormorant Garamond', serif;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --available-color: #d4af6a;
+    --limited-color: #e8cf8f;
+    --full-color: #a8873f;
+
+    /* Timing */
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 400ms;
 }
 
 /* --- Light Mode Variables --- */
 body.light-mode {
-    --background-color: #F4F4F4;
-    --panel-color: #FFFFFF;
-    --border-color: #DDDDDD;
-    --text-primary: #000000;
-    --text-secondary: #555555;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --background-color: #f8f7f4;
+    --panel-color: #ffffff;
+    --border-color: #d4af6a;
+    --text-primary: #1a1d23;
+    --text-secondary: #666666;
+    --shadow-color: rgba(212, 175, 106, 0.15);
 }
 
 /* --- General & Typography --- */
@@ -51,13 +59,43 @@ h1, h2 {
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     text-align: center;
     margin-bottom: 40px;
-    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent-color) 20%, var(--accent-color) 80%, transparent);
+}
+
+h2::after::before {
+    content: '◆';
+    display: block;
+    text-align: center;
+}
+
+h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    color: var(--accent-color);
+    letter-spacing: 0.06em;
 }
 
 /* --- Navbar --- */
@@ -80,11 +118,40 @@ h2 {
 }
 
 .company-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
     font-family: var(--font-secondary);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
-    text-decoration: none;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* Scroll state - show monogram only */
+.navbar.scrolled .logo-image {
+    height: 35px;
+}
+
+/* Mobile: monogram only */
+@media (max-width: 768px) {
+    .logo-text {
+        display: none;
+    }
+    .logo-image {
+        height: 35px;
+    }
 }
 
 .nav-menu {
@@ -110,21 +177,26 @@ h2 {
 }
 
 .discord-button {
-    background-color: var(--accent-color);
-    color: var(--text-primary);
+    background: linear-gradient(180deg, var(--accent-highlight) 0%, var(--accent-color) 50%, var(--accent-dark) 100%);
+    color: var(--background-color);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 700;
-    transition: background-color 0.3s ease;
+    letter-spacing: 0.05em;
+    transition: transform var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
+    box-shadow: 0 4px 12px rgba(212, 175, 106, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--accent-dark);
 }
 body.light-mode .discord-button {
-    color: #000;
+    color: var(--background-color);
 }
 
 
 .discord-button:hover {
-    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 106, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .hamburger {
@@ -147,13 +219,52 @@ body.light-mode .discord-button {
 /* --- Hero Section --- */
 .hero-section {
     position: relative;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('https://i.postimg.cc/8knK7BR9/GENESIS-REAL-ESTATE-background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(15, 17, 21, 0.75), rgba(15, 17, 21, 0.65)),
+                url('https://i.postimg.cc/8knK7BR9/GENESIS-REAL-ESTATE-background.jpg') no-repeat center center/cover;
     color: var(--text-primary);
+    overflow: hidden;
+}
+
+/* Gold dust particle effect */
+.gold-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.gold-particle {
+    position: absolute;
+    background: radial-gradient(circle, var(--accent-highlight), transparent);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
 }
 
 .hero-overlay {
@@ -162,38 +273,85 @@ body.light-mode .discord-button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(15, 17, 21, 0.6);
+    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+}
+
+.hero-logo {
+    max-height: 150px;
+    width: auto;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease;
+    filter: drop-shadow(0 4px 12px rgba(212, 175, 106, 0.3));
 }
 
 .hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin-bottom: 20px;
+    color: var(--accent-highlight);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    color: #ddd; /* Keep subtitle lighter for readability on dark overlay */
+    font-family: var(--font-tertiary);
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    animation: fadeInUp 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .cta-button {
-    background-color: var(--accent-color);
-    color: #000;
-    padding: 15px 30px;
+    background: linear-gradient(180deg, var(--accent-highlight) 0%, var(--accent-color) 50%, var(--accent-dark) 100%);
+    color: var(--background-color);
+    padding: 18px 40px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: transform var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
+    box-shadow: 0 6px 20px rgba(212, 175, 106, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--accent-dark);
+    animation: fadeInUp 1s ease 0.4s forwards;
+    opacity: 0;
 }
 
 .cta-button:hover {
-    background-color: var(--accent-hover);
     transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 106, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 /* --- Content Sections --- */
@@ -203,6 +361,40 @@ body.light-mode .discord-button {
 }
 
 .alt-bg {
+    background-color: var(--panel-color);
+}
+
+/* Section divider with diamond */
+.section-divider {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+}
+
+.section-divider::after {
+    content: '◆';
+    position: relative;
+    background-color: var(--background-color);
+    padding: 0 20px;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+}
+
+.alt-bg + .content-section .section-divider::after,
+.alt-bg .section-divider::after {
     background-color: var(--panel-color);
 }
 
@@ -413,11 +605,23 @@ body.light-mode .discord-button {
 /* --- Footer --- */
 .footer {
     background-color: var(--panel-color);
-    padding: 40px 0;
+    padding: 50px 0;
     margin-top: 80px;
-    border-top: 1px solid var(--border-color);
+    border-top: 2px solid var(--accent-color);
     color: var(--text-secondary);
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent-highlight), transparent);
 }
 
 .footer-content {
@@ -428,16 +632,31 @@ body.light-mode .discord-button {
     gap: 20px;
 }
 
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
 .footer-logo {
     color: var(--text-primary);
     font-family: var(--font-secondary);
-    margin: 0 0 5px 0;
+    margin: 0;
     font-size: 1.5rem;
+    letter-spacing: 0.12em;
 }
 
 .footer-left p {
     margin: 0;
     font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
 .footer-right p {
