@@ -165,6 +165,14 @@ document.addEventListener('DOMContentLoaded', () => {
         modalTitle.textContent = `${block.name} - Available Properties`;
         propertiesTbody.innerHTML = '';
 
+        // Show block image in modal
+        const modalBlockImage = document.getElementById('modal-block-image');
+        if (modalBlockImage && block.image) {
+            modalBlockImage.src = block.image;
+            modalBlockImage.alt = block.name;
+            modalBlockImage.style.display = 'block';
+        }
+
         // Reset form visibility
         propertiesTableContainer.style.display = '';
         bookingFormContainer.style.display = 'none';
@@ -261,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cid = document.getElementById('booking-cid').value.trim();
         const phone = document.getElementById('booking-phone').value.trim();
         const address = bookingAddressInput.value.trim();
-        const date = document.getElementById('booking-date').value;
+        let date = document.getElementById('booking-date').value;
         const website = websiteHoneypotField.value;
 
         // Honeypot check
@@ -270,8 +278,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         }
 
+        // Default to today if no date selected
+        if (!date) {
+            const today = new Date().toISOString().split('T')[0];
+            date = today;
+        }
+
         // Required fields
-        if (!name || !cid || !phone || !address || !date) {
+        if (!name || !cid || !phone || !address) {
             showBookingError('Please fill in all required fields.');
             return false;
         }

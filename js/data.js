@@ -168,12 +168,12 @@ const teamMembers = [
         name: "Freak Carlos",
         role: "CEO / Founder",
         phone: "262-3261",
-        image: "assets/Team/Freak-Carlos.webp"
+        image: "assets/Team/FreakCarlos.png"
     },
     {
-        name: "Munshi Jr",
+        name: "Nirob brooks",
         role: "Realtor",
-        phone: "559-3942",
-        image: "assets/Team/Munshi-Jr.png"
+        phone: "873-1459",
+        image: "assets/Team/Nirob-brooks.png"
     }
 ];

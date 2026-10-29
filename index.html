@@ -132,6 +132,9 @@
         <div class="modal-panel">
             <button class="modal-close" id="close-modal-btn">&times;</button>
             <h2 id="modal-title">Property Details</h2>
+            <div id="modal-block-image-container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                <img id="modal-block-image" src="" alt="Block Preview" style="max-width: 100%; max-height: 200px; border-radius: 8px; display: none;">
+            </div>
             <div class="table-container" id="properties-table-container" style="overflow-x: auto;">
                 <table class="properties-table">
                     <thead>
@@ -175,8 +178,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="booking-date">Requested Move-in Date <span class="required">*</span></label>
-                        <input type="date" id="booking-date" name="date" required aria-required="true">
+                        <label for="booking-date">Requested Move-in Date</label>
+                        <input type="date" id="booking-date" name="date">
                     </div>
 
                     <!-- Honeypot field for spam protection -->
